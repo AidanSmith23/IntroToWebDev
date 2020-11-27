@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+
+    <body>
+        <h1>Heading</h1>
+        <p> <span style = "background-color: red"> Para</span>graph </p>
+        <p> <strong> Bold </strong> </p>
+        <p> <em> Italic </em> </p>
+        <a href = "#google"> google </a>
+        <ul>
+            <li> List </li>
+        </ul>
+        <hr />
+        <div id="ContentArea" style="color: red;">
+            Red
+        </div>
+        <p> <sup> super </sup> </p>
+        <p> <sub> sub </sub> </p>
+        <p> <ins> underlined </ins> </p>
+        <p> <del> line </del> </p>
+        <p> <mark> highlight </mark> </p>
+        <blockquote> quote </blockquote>
+        <p> <code> Code </code></p>
+
+        <a href = "http://www.google.com" target="_blank" id = "google" >
+          <img src = "images\google.jpg" alt = "google logo" style="border: thin red solid; width: 100px;">
+        </a>
+        <!-- Comment -->
+
+        <table border="1" width = "100%">
+          <caption>Contact Information</caption>
+                    <tr>
+                        <th>Grouping</th>
+                        <th colspan="2">Name</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"> Friends </td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>555-1212</td>
+                    </tr>
+                    <tr bgcolor = "red">
+                        <td>Sally</td>
+                        <td>Smith</td>
+                        <td>555-1123</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sam</td>
+                        <td>Jones</td>
+                        <td>555-4321</td>
+                    </tr>
+                </table>
+
+        <form action="http://www.google.com" method="POST">
+          Text Input: <input type="text" name="myTextInput" required/><br />
+          Radio Buttons:<br />
+              <input type="radio" name="answer" value="YES" checked />Yes<br />
+              <input type="radio" name="answer" value="NO" />No<br />
+              <input type="radio" name="answer" value="MAYBE" />Maybe<br />
+          Password Input: <input type="password" name="userPassword" /><br />
+              <input type="checkbox" name="myChoices" value="Soup" checked/>Soup<br />
+              <input type="checkbox" name="myChoices" value="Salad" checked/>Salad<br />
+              <input type="checkbox" name="myChoices" value="Fries" checked/>Fries<br />
+              <input type="checkbox" name="myChoices" value="Dessert" checked/>Dessert<br />
+          <select name="phones">
+              <option value="iPhone6">Mac OS</option>
+              <option value="GalaxyS6">Windows</option>
+              <option value="Nexus5">Linux</option>
+          </select><br />
+          <textarea name="briefDescription"></textarea><br />
+          <input type="submit" /><input type="reset" /><br />
+        </form>
+
+    </body>
+</html>
