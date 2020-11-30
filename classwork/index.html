@@ -2,10 +2,29 @@
 <html>
     <head>
         <title>Title</title>
+        <style>
+          p  {
+                color:darkviolet;
+            }
+          li {
+                border-bottom: 1px dashed black;
+            }
+          #ContentArea, #Groups {
+            border: 3px red dashed;
+          }
+
+          .warning {
+              background-color: red;
+          }
+
+          h1.warning {
+            font-style: italic;
+          }
+        </style>
     </head>
 
     <body>
-        <h1>Heading</h1>
+        <h1 class="warning">Heading</h1>
         <p> <span style = "background-color: red"> Para</span>graph </p>
         <p> <strong> Bold </strong> </p>
         <p> <em> Italic </em> </p>
@@ -17,10 +36,10 @@
         <div id="ContentArea" style="color: red;">
             Red
         </div>
-        <p> <sup> super </sup> </p>
+        <p class = "test"> <sup> super </sup> </p>
         <p> <sub> sub </sub> </p>
-        <p> <ins> underlined </ins> </p>
-        <p> <del> line </del> </p>
+        <p class="warning"> <ins> underlined </ins> </p>
+        <p id = "Groups"> <del> line </del> </p>
         <p> <mark> highlight </mark> </p>
         <blockquote> quote </blockquote>
         <p> <code> Code </code></p>
@@ -30,7 +49,7 @@
         </a>
         <!-- Comment -->
 
-        <table border="1" width = "100%">
+        <table border="1" width = "100%" >
           <caption>Contact Information</caption>
                     <tr>
                         <th>Grouping</th>
@@ -57,7 +76,7 @@
                 </table>
 
         <form action="http://www.google.com" method="POST">
-          Text Input: <input type="text" name="myTextInput" required/><br />
+          Text Input: <input type="text" name="myTextInput" required/ class = "test"><br />
           Radio Buttons:<br />
               <input type="radio" name="answer" value="YES" checked />Yes<br />
               <input type="radio" name="answer" value="NO" />No<br />
@@ -75,6 +94,9 @@
           <textarea name="briefDescription"></textarea><br />
           <input type="submit" /><input type="reset" /><br />
         </form>
+
+
+
 
     </body>
 </html>
