@@ -8,43 +8,58 @@
 
 <html lang="en" style="text-align:center">
     <head>
-        <title>Home Page</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <title>Home Page</title>
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
     </head>
 
     <body>
-        <header>
-            <h1>The Restaurant</h1>
-        </header>
+      <header>
+          <h1>The Restaurant</h1>
+          <h2 class="font-italic">Best Korean BBQ</h2>
+          <h3 class="text-right mt-5">The Street, London</h3>
+      </header>
 
         <nav>
-          <hr>
-          <table style="width:100%">
-            <tr>
-              <td style="width: 33%; text-align:right"> <a href="Home.html" id = "Home"> Home </a> </td>
-              <td style="width: 10%"> <a href="Menu.html" id = "Menu"> Menu </a> </td>
-              <td style="width: 33%; text-align:left"> <a href="Contact Us.html" id = "Contact Us"> Contact Us </a> </td>
-            </tr>
-          </table>
-          <hr>
+          <a class = "btn" href="Home.html" id = "Home"> Home </a>
+          <a class = "btn" href="Menu.html" id = "Menu"> Menu </a>
+          <a class = "btn" href="Contact Us.html" id = "Contact Us"> Contact Us </a>
+          <div class = "clear-float"></div>
         </nav>
 
-        <section>
-          <img src="images/restaurant.jpg" alt = "A photo of the restaurant" style="width: 400px; height: 150px">
+        <div class="container">
 
-          <article style="text-align:center">
-            <p> Restaurant Description: </p>
-            <p> This is a restaurant, it's nice and yummy. Come and eat, you will like it. Also, it's a Korean BBQ which everyone should try (and love).</p>
-          </article>
-        </section>
+          <div class="row">
+            <div class="col-lg-7 col-md-6">
+              <img src="images/restaurant.jpg" alt = "A photo of the restaurant" class="img-fluid">
+            </div>
 
-        <section>
-          <h3> Read a recent review! </h3>
-          <a href="https://www.google.com/maps/contrib/112689847047022796464/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.40996,-1.508142,17z/data=!3m1!4b1" id = "review" target="_blank"> "good quality tasty food" </a>
+            <div style="text-align:center" class="col-lg-5 col-md-6">
+              <p> Restaurant Description: </p>
+              <p> This is a restaurant, it's nice and yummy. Come and eat, you will like it. Also, it's a Korean BBQ which everyone should try (and love).</p>
+            </div>
+          </div>
+
+          <section>
+            <h2> Read a recent review! </h2>
+            <a href="https://www.google.com/maps/contrib/112689847047022796464/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.40996,-1.508142,17z/data=!3m1!4b1" id = "review" target="_blank"> "good quality tasty food" </a>
+          </section>
+
+        </div>
 
         <footer>
-          <hr>
-          <p> The street, London, UK, SE1 00A </p>
-          <p> 020 555 1234 </p>
+          <h3> The street, London, UK, SE1 00A </h3>
+          <p> <strong> 020 555 1234 </strong> </p>
         </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     </body>
 </html>

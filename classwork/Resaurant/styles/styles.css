@@ -1,0 +1,70 @@
+/*
+Creator: Aidan Smith
+Date created: 30/11/2020
+Date last modified: 30/11/2020
+*/
+
+body {
+    font-family: helvetica, arial;
+    color: #0d1f2d;
+    max-width: 900px;
+    min-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fef9ff;
+}
+
+footer, header {
+    background-color: #5b7d87;
+    padding: 60px 100px 20px 50px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+h1 {
+    font-family: courier, helvetica, arial;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    border-top: thin solid #1C354A;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h4 {
+    border-bottom: thin solid #1C354A;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+nav {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #1C354A;
+  margin-bottom: 10px;
+}
+
+nav .btn {
+    background-color: #1C354A;
+    color: #fef9ff;
+}
+
+nav .btn:hover {
+    background-color: #3C78AB;
+}
+
+nav .btn:visited{
+    color: #fef9ff;
+}
+
+.clear-float {
+  clear:both;
+}
