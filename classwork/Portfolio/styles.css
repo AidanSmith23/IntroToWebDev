@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
 }
 
-header, footer {
+footer {
     background-color: #5b7d87;
     color: #fef9ff;
     height: 100px;
@@ -27,10 +27,10 @@ h1 {
 }
 
 nav {
-    border-top: 3px dashed #546a7b;
-    border-bottom: 3px dashed #546a7b;
-    margin-top: 4px;
-    margin-bottom: 4px;
+  border-top: thin #5b7d87 solid;
+  border-bottom: thin #5b7d87 solid;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 nav a {
@@ -44,6 +44,19 @@ nav a {
     margin: 2px 2.5% 17px 2.5%;
     width: 18%;
     float:left;
+}
+
+nav .btn {
+    background-color: #5b7d87;
+    color: #fef9ff;
+}
+
+nav .btn:hover {
+    font-weight: bold;
+}
+
+.clear-float {
+  clear:both;
 }
 
 nav a:hover {
