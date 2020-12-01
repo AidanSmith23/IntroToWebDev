@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Aidan Smith
+    Date Created: 27/11/2020
+    Most recent revision: 27/11/2020
+-->
+
+<html lang="en" style = "text-align:center">
+    <head>
+        <title>Contact Us</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>The Restaurant</h1>
+        </header>
+
+        <nav>
+          <hr>
+          <table style="width:100%">
+            <tr>
+              <td style="width: 33%; text-align:right"> <a href="Home.html" id = "Home"> Home </a> </td>
+              <td style="width: 10%"> <a href="Menu.html" id = "Menu"> Menu </a> </td>
+              <td style="width: 33%; text-align:left"> <a href="Contact Us.html" id = "Contact Us"> Contact Us </a> </td>
+            </tr>
+          </table>
+          <hr>
+        </nav>
+
+        <form action="ContactInfo.html" method="POST">
+          <table style="width:100%">
+            <tr>
+              <td style = "text-align:right; width: 43.5%"> Name: </td>
+              <td style = "text-align:left"> <input type="text" name="Name" id = "Name" required/ style = "width: 80%"> </td>
+            </tr>
+
+            <tr>
+              <td style = "text-align:right; width: 43.5%"> Email: </td>
+              <td style = "text-align:left"> <input type="text" name="Email" id = "Email" required/ style = "width: 80%"> </td>
+            </tr>
+
+            <tr>
+              <td style = "text-align:right; width: 43.5%"> Phone: </td>
+              <td style = "text-align:left"> <input type="text" name="Phone" id = "Phone" required/ style = "width: 80%"> </td>
+            </tr>
+
+            <tr>
+              <td style = "text-align:right; width: 43.5%"> Reason for Inquiry: </td>
+              <td style = "text-align:left">
+                <select name="Reason" style = "width: 81%">
+                    <option value="Catering">Catering</option>
+                    <option value="Booking">Booking</option>
+                    <option value="Other">Other</option>
+                </select><br />
+              </td>
+            </tr>
+
+            <tr>
+              <td style = "text-align:right; vertical-align:top; width: 43.5%"> Additional Information: </td>
+              <td style = "text-align:left"> <textarea name="Additional Information" style = "width: 80.3%; height: 100px"></textarea></td>
+            </tr>
+
+            <tr>
+              <td style = "text-align:right; width: 43.5%"> Have you been to the restaurant? </td>
+              <td style = "text-align:left">
+                <input type="radio" name="answer" value="No" checked />No
+                <input type="radio" name="answer" value="Yes" />Yes
+              </td>
+            </tr>
+
+            <tr>
+              <td style = "text-align:right; width: 43.5%"> Best day to contact you: </td>
+              <td style = "text-align:left">
+                <input type="checkbox" name="ContactDay" value="Monday">M
+                <input type="checkbox" name="ContactDay" value="Tuesday">Tu
+                <input type="checkbox" name="ContactDay" value="Wednesday">W
+                <input type="checkbox" name="ContactDay" value="Thursday">Th
+                <input type="checkbox" name="ContactDay" value="Friday">F
+              </td>
+            </tr>
+          </table>
+
+          <input type="Submit" value = "Send Request" /><input type="reset"><br />
+        </form>
+
+        <footer>
+          <hr>
+          <p> The street, London, UK, SE1 00A </p>
+          <p> 020 555 1234 </p>
+        </footer>
+    </body>
+</html>
