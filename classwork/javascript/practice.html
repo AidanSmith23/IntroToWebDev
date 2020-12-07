@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple onload Example with Function</title>
+</head>
+<body onload="greetTheUser();">
+    <div>
+        <h1>Hi, <span id="userName"></span>!</h1>
+    </div>
+
+    <div>
+        Enter your name: <input type="text" id="inputName" placeholder="What's your name?" />
+        <button onclick="greetTheUser2();">Show Greeting</button>
+    </div>
+    <div id="greeting" style="display:none;">
+        <h1>Hi, <span id="userName2"></span>!</h1>
+    </div>
+
+
+    <script type="text/javascript">
+        function greetTheUser() {
+            var userName = prompt("What is your name?");
+            document.getElementById("userName").innerText = userName;
+        }
+        function greetTheUser2() {
+            document.getElementById("userName2").innerText
+                = document.getElementById("inputName").value;
+            document.getElementById("greeting").style.display = "block";
+        }
+    </script>
+</body>
+</html>
