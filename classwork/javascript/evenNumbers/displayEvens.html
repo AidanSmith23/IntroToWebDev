@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CODE-ALONG: Click to Add Items</title>
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Sample</h1>
+        <form name="numberFun" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate>
+            <div class="form-col">
+                <div class="form-group row">
+                    <label for="num1">Starting Number</label>
+                    <input type="number" class="form-control" id="start" required>
+                    <div class="invalid-feedback">
+                        This is required and must be an integer.
+                    </div>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group row">
+                    <label for="num1">Ending Number</label>
+                    <input type="number" class="form-control" id="end" required>
+                    <div class="invalid-feedback">
+                        This is required and must be an integer greater than the starting number.
+                    </div>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group row">
+                    <label for="num1">Step</label>
+                    <input type="number" class="form-control" id="steps" min = "1" required>
+                    <div class="invalid-feedback">
+                        This is required and must be a positive integer.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <button type="submit" id="submitButton" class="btn btn-primary">
+                        Calculate</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+        </form>
+
+      </form>
+
+        <table id="results" class="table table-striped" style="display: none">
+            <thead>
+              <tr id="tablehead"> </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span id="addResult"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+      </form> <!-- end .container -->
+    </div> <!-- end .container -->
+
+
+    <script src="displayEvens.js"></script>
+</body>
+</html>

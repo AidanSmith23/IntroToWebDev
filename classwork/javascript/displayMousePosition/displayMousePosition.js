@@ -6,26 +6,23 @@ var mouseY = document.getElementById("mouseY");
 
 function toggle() {
 
-    // 'this' here is the HTML element that triggered the event.
-    // When we're done, it will be btnToggle.
-
-    // classList is an array-like collection of CSS class names:
-    // (https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
-    // It allows us to treat class names individually
-    // instead of setting all classes at once:
-    // element.className = "btn btn-default btn-lrg"
-
     if (tracking) {
-        this.classList.remove("btn-danger");
-        this.classList.add("btn-success")
-        this.innerText = "Start mouse tracking.";
+        btnToggle.classList.remove("btn-danger");
+        btnToggle.classList.add("btn-success")
+        btnToggle.innerText = "Start mouse tracking.";
+        btnToggle2.classList.remove("btn-danger");
+        btnToggle2.classList.add("btn-success")
+        btnToggle2.innerText = "Start mouse tracking.";
 
         mouseX.innerText = "Untracked";
         mouseY.innerText = "Untracked";
     } else {
-        this.classList.remove("btn-success");
-        this.classList.add("btn-danger");
-        this.innerText = "Stop mouse tracking.";
+        btnToggle.classList.remove("btn-success");
+        btnToggle.classList.add("btn-danger");
+        btnToggle.innerText = "Stop mouse tracking.";
+        btnToggle2.classList.remove("btn-success");
+        btnToggle2.classList.add("btn-danger");
+        btnToggle2.innerText = "Stop mouse tracking.";
     }
 
     tracking = !tracking;
@@ -33,16 +30,27 @@ function toggle() {
 
 function updateMousePosition(evt) {
     // If tracking is enabled, update the view.
-    if (tracking) {
-        // 'evt' is a JavaScript event object.
-        // It contains different properties depending on the type of event:
-        // click, submit, mouseover, even media playback
-        // (https://developer.mozilla.org/en-US/docs/Web/Events).
-        // Our mouse's position in X and Y coordinates is clientX, clientY.
-        mouseX.innerText = evt.clientX;
-        mouseY.innerText = evt.clientY;
+    if (window.ev === true || btnToggle2.onmouseover) {
+      if (tracking) {
+          mouseX.innerText = evt.clientX;
+          mouseY.innerText = evt.clientY;
+      }
     }
 }
 
-document.getElementById("btnToggle").addEventListener("click", toggle);
+/*document.getElementById("btnToggle").addEventListener("click", toggle);
+document.getElementById("btnToggle2").addEventListener("click", toggle);*/
+document.addEventListener("click", toggle);
 document.addEventListener("mousemove", updateMousePosition);
+
+window.ev = false;
+
+document.getElementById('btnToggle').onmouseover = function () {
+    window.ev = true;
+    console.log(window.ev);
+}
+
+document.getElementById('btnToggle').onmouseout = function () {
+    window.ev = false;
+    console.log(window.ev);
+}
