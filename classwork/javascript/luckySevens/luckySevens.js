@@ -54,6 +54,7 @@ function validate() {
 
     });
 
+
     document.getElementById("sum").innerText = 2;
     document.getElementById('dice1').src=('images/dice1.png');
     document.getElementById('dice2').src=('images/dice1.png');
@@ -80,6 +81,11 @@ function validate() {
 
     // We always return false so that the form doesn't submit.
     // Submission causes the page to reload.
+
+    if (instant.checked){
+      changeInstant();
+    }
+
     return false;
 }
 
@@ -151,24 +157,52 @@ function changeSpeed (){
 }
 
 function changeAuto () {
-  if(automatic.checked){
-    speedBox.style.display = "block";
-    if (money > 0){
-      update = setInterval(updateTable, 300/speed);
-    }
-    rollButton.style.display = "none";
+  speedBox.style.display = "block";
+  if (money > 0){
+    update = setInterval(updateTable, 300/speed);
   }
-  else{
-    clearInterval(update);
-    speedBox.style.display = "none";
+  rollButton.style.display = "none";
+}
 
-    if (money > 0){
-      rollButton.style.display = "block";
+function changeManual() {
+  clearInterval(update);
+  speedBox.style.display = "none";
+
+  if (money > 0){
+    rollButton.style.display = "block";
+  }
+}
+
+function changeInstant() {
+  clearInterval(update);
+  speedBox.style.display = "none";
+  rollButton.style.display = "none";
+
+  if (money>0){
+    while (money>0){
+      count ++;
+      var dice1 = rollDice();
+      var dice2 = rollDice();
+      if (dice1+dice2==7){
+        money += 4;
+        if (money>maxMoney){
+          maxMoney=money;
+          maxCount = count;
+        }
+      }
+      else{
+        money -= 1;
+      }
+      var length = chart.options.data[0].dataPoints.length;
+    	chart.options.data[0].dataPoints.push({ y: money});
     }
+    updateTable();
   }
 }
 
 
 document.getElementById("speed").addEventListener("change", changeSpeed);
 document.getElementById("automatic").addEventListener("change", changeAuto);
+document.getElementById("manual").addEventListener("change", changeManual);
+document.getElementById("instant").addEventListener("change", changeInstant);
 document.getElementById("rollButton").addEventListener("click", updateTable);
