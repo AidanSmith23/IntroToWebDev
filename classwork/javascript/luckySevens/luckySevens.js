@@ -3,7 +3,7 @@ function rollDice(){
 }
 
 // These elements will be used in both functions.
-var betting = document.forms["betting"];
+var $betting = document.forms["betting"];
 var start = document.getElementById("start");
 var speed = 1;
 var submitButton = document.getElementById("submitButton");

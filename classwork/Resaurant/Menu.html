@@ -15,6 +15,14 @@
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <style>
+        hr{
+          border-color: #5b7d87;
+        }
+      </style>
     </head>
 
     <body>
@@ -25,55 +33,106 @@
       </header>
 
         <nav>
-          <a class = "btn" href="Home.html" id = "Home"> Home </a>
-          <a class = "btn" href="Menu.html" id = "Menu"> Menu </a>
+          <a class = "btn fa fa-home" href="Home.html" id = "Home" style = "font-size:24px" ></a>
+          <a class = "btn" href="Menu.html" id = "Menu" style = "background-color:#3C78AB"> Menu </a>
           <a class = "btn" href="Contact Us.html" id = "Contact Us"> Contact Us </a>
           <div class = "clear-float"></div>
         </nav>
 
+        <h4> Menu </h4>
+
+        <div id="menu_carousel" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#menu_carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#menu_carousel" data-slide-to="1"></li>
+            <li data-target="#menu_carousel" data-slide-to="2"></li>
+          </ul>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <strong>We're opening a new location! </strong>
+            </div>
+            <div class="carousel-item">
+              <strong>We're rolling out our seasonal menu, with special options for this season.</strong>
+            </div>
+            <div class="carousel-item">
+              <strong>The Drink of the Month is TSG Special Brew.</strong>
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#menu_carousel" data-slide="prev"></a>
+          <a class="carousel-control-next" href="#menu_carousel" data-slide="next"></a>
+        </div>
+
         <div class="container" style="text-align:center">
           <h4>Meat</h4>
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-3 col-sm-12">
               <p><strong>BBQ Pork Belly</strong> <br>£8.20</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-1 col-md-1 col-sm-12">
+              <hr/>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <p><strong>New York Style Chicken</strong> <br>£7.80</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-1 col-md-1 col-sm-12">
+              <hr/>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
               <p><strong>Beef Strips</strong> <br>£8.50</p>
             </div>
           </div>
 
           <h4>Sides</h4>
-          <div class="row" style="text-align: center">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
               <p><strong>Bap</strong> <br>£2.00</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-1 col-md-1 col-sm-12">
+              <hr/>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <p><strong>Noodles</strong> <br>£3.20</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-1 col-md-1 col-sm-12">
+              <hr/>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
               <p><strong>KFC</strong> <br>£5.20</p>
             </div>
           </div>
 
           <h4>Drinks</h4>
-          <div class="row" style="text-align: center">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
               <p><strong>Bottled Water</strong> <br>£2.00</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-1 col-md-1 col-sm-12">
+              <hr/>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <p><strong>Soft Drink</strong> <br>£2.80</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-1 col-md-1 col-sm-12">
+              <hr/>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
               <p><strong>Milk Drink</strong> <br>£2.50</p>
             </div>
           </div>
+        </div>
 
-        <footer>
-          <h3> The street, London, UK, SE1 00A </h3>
-          <p> <strong> 020 555 1234 </strong> </p>
-        </footer>
+          <footer>
+            <h3> The street, London, UK, SE1 00A </h3>
+            <p> <strong> 020 555 1234 </strong> </p>
+          </footer>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+          <noscript>
+              alert("You have javascript disabled. This will effect your viewing experience.");
+          </noscript>
     </body>
 </html>

@@ -15,6 +15,37 @@
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <style>
+        label {
+          display: inline-block;
+          text-align: right;
+          margin-right: 10px;
+          margin-top: 5px;
+        }
+
+
+        .form-row {
+          margin-top: 10px;
+        }
+
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        li {
+          list-style-type:none;
+        }
+
+        ul {
+          padding-left: 0; padding-top:5px; text-align:left;
+        }
+      </style>
     </head>
 
     <body>
@@ -25,71 +56,104 @@
       </header>
 
         <nav>
-          <a class = "btn" href="Home.html" id = "Home"> Home </a>
+          <a class = "btn fa fa-home" href="Home.html" id = "Home" style = "font-size:24px" ></a>
           <a class = "btn" href="Menu.html" id = "Menu"> Menu </a>
-          <a class = "btn" href="Contact Us.html" id = "Contact Us"> Contact Us </a>
+          <a class = "btn" href="Contact Us.html" id = "Contact Us" style = "background-color:#3C78AB"> Contact Us </a>
           <div class = "clear-float"></div>
         </nav>
 
-        <form action="ContactInfo.html" method="POST">
-          <table style="width:100%">
-            <tr>
-              <td style = "text-align:right; width: 43.5%"> Name: </td>
-              <td style = "text-align:left"> <input type="text" name="Name" id = "Name" required/ style = "width: 80%"> </td>
-            </tr>
+        <h4>Contact Form</h4>
 
-            <tr>
-              <td style = "text-align:right; width: 43.5%"> Email: </td>
-              <td style = "text-align:left"> <input type="text" name="Email" id = "Email" required/ style = "width: 80%"> </td>
-            </tr>
+        <div class="container" style="text-align:center" >
+          <form name="contact_us" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate style="width: 80%">
+            <div class="form-row" style="margin-left:0">
+                <label for="Name" class = "col-6"> Full name: </label>
+                <input type="text" name="Name" id = "Name" required/ class="form-control col-5" pattern="[a-zA-Z]+">
+                <div class="invalid-feedback">
+                  Please enter a name (only alphabetic characters).
+                </div>
+            </div>
 
-            <tr>
-              <td style = "text-align:right; width: 43.5%"> Phone: </td>
-              <td style = "text-align:left"> <input type="text" name="Phone" id = "Phone" required/ style = "width: 80%"> </td>
-            </tr>
+            <div class="form-row" style="margin-left:0">
+                <label for="Email" class = "col-6"> Email address: </label>
+                <input type="email" name="Email" id = "Email" required/ class="form-control col-5">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+            </div>
 
-            <tr>
-              <td style = "text-align:right; width: 43.5%"> Reason for Inquiry: </td>
-              <td style = "text-align:left">
-                <select name="Reason" style = "width: 81%">
+            <div class="form-row" style="margin-left:0">
+                <label for="Phone" class = "col-6"> Phone number: </label>
+                <input type="tel" name="Phone" id = "Phone" required/ class="form-control col-5">
+                <div class="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="Reason" class = "col-6"> Reason for Inquiry: </label>
+                <select name="Reason" class="form-control col-5">
                     <option value="Catering">Catering</option>
                     <option value="Booking">Booking</option>
                     <option value="Other">Other</option>
-                </select><br />
-              </td>
-            </tr>
+                </select>
+            </div>
 
-            <tr>
-              <td style = "text-align:right; vertical-align:top; width: 43.5%"> Additional Information: </td>
-              <td style = "text-align:left"> <textarea name="Additional Information" style = "width: 80.3%; height: 100px"></textarea></td>
-            </tr>
+            <div class="form-row" style="margin-left:0">
+                <label for="Additional Information" class = "col-6"> Additional Information: </label>
+                <textarea name="Additional Information" height: 100px class="form-control col-5"></textarea>
+            </div>
 
-            <tr>
-              <td style = "text-align:right; width: 43.5%"> Have you been to the restaurant? </td>
-              <td style = "text-align:left">
-                <input type="radio" name="answer" value="No" checked />No
-                <input type="radio" name="answer" value="Yes" />Yes
-              </td>
-            </tr>
+            <div class="form-row" style="margin-left:0">
+                <label for="past" class = "col-6"> Have you been to the restaurant? </label>
+                <ul>
+                  <li>
+                    <input type="radio" name="past" value="Yes" checked /> Yes
+                  </li>
+                  <li>
+                    <input type="radio" name="past" value="No" /> No
+                  </li>
+                </ul>
+            </div>
 
-            <tr>
-              <td style = "text-align:right; width: 43.5%"> Best day to contact you: </td>
-              <td style = "text-align:left">
-                <input type="checkbox" name="ContactDay" value="Monday">M
-                <input type="checkbox" name="ContactDay" value="Tuesday">Tu
-                <input type="checkbox" name="ContactDay" value="Wednesday">W
-                <input type="checkbox" name="ContactDay" value="Thursday">Th
-                <input type="checkbox" name="ContactDay" value="Friday">F
-              </td>
-            </tr>
-          </table>
+            <div class="form-row" style="margin-left:0">
+                <label for="ContactDay" class = "col-6"> What is the best day to contact you: </label>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Monday"> Monday
+                  </li>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Tuesday"> Tuesday
+                  </li>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Wednesday"> Wednesday
+                  </li>
+                  <li >
+                    <input type="checkbox" name="ContactDay" value="Thursday"> Thursday
+                  </li>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Friday"> Friday
+                  </li>
+                </ul>
+            </div>
 
-          <input type="Submit" value = "Send Request" /><input type="reset"><br />
-        </form>
+            <div class="form-row">
+                <div class="form-group col">
+                    <button type="submit" id="submitButton" class="btn btn-primary">
+                        Submit
+                    </button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+          </form>
+        </div>
+
 
         <footer>
           <h3> The street, London, UK, SE1 00A </h3>
           <p> <strong> 020 555 1234 </strong> </p>
         </footer>
+
+        <script src="scripts\contact_form.js"></script>
     </body>
 </html>
