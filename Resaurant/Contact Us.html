@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Aidan Smith
+    Date Created: 27/11/2020
+    Most recent revision: 27/11/2020
+-->
+
+<html lang="en" style="text-align:center">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <title>Contact Us</title>
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
+      <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <style>
+        label {
+          display: inline-block;
+          text-align: right;
+          margin-right: 10px;
+          margin-top: 5px;
+        }
+
+
+        .form-row {
+          margin-top: 10px;
+        }
+
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        li {
+          list-style-type:none;
+        }
+
+        ul {
+          padding-left: 0; padding-top:5px; text-align:left;
+        }
+      </style>
+    </head>
+
+    <body>
+      <header>
+          <h1>The Restaurant</h1>
+          <h2 class="font-italic">Best Korean BBQ</h2>
+          <h3 class="text-right mt-5">The Street, London</h3>
+      </header>
+
+        <nav>
+          <a class = "btn fas fa-home" href="Home.html" id = "Home" style = "font-size:24px" ></a>
+          <a class = "btn" href="Menu.html" id = "Menu"> Menu </a>
+          <a class = "btn" href="Contact Us.html" id = "Contact Us" style = "background-color:#3C78AB"> Contact Us </a>
+          <div class = "clear-float"></div>
+        </nav>
+
+        <div id="contact_carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <strong><i class="fas fa-people-carry"></i> We're opening a new location! <i class="fas fa-people-carry"></i></strong>
+            </div>
+            <div class="carousel-item Christmas">
+              <strong>We're rolling out our seasonal menu, with special options for this season.</strong>
+            </div>
+            <div class="carousel-item">
+              <strong> <i class="fas fa-cocktail"></i> The Drink of the Month is TSG Special Brew. <i class="fas fa-cocktail"></i></strong>
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#contact_carousel" data-slide="prev"></a>
+          <a class="carousel-control-next" href="#contact_carousel" data-slide="next"></a>
+
+        </div>
+
+        <h4>Contact Form</h4>
+
+        <div class="container" style="text-align:center" >
+          <form name="contact_us" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate style="width: 80%">
+            <div class="form-row" style="margin-left:0">
+                <label for="Name" class = "col-6"> Full name: </label>
+                <input type="text" name="Name" id = "Name" required/ class="form-control col-5" pattern="[a-zA-Z]+">
+                <div class="invalid-feedback">
+                  Please enter a name (only alphabetic characters).
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="Email" class = "col-6"> Email address: </label>
+                <input type="email" name="Email" id = "Email" required/ class="form-control col-5">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="Phone" class = "col-6"> Phone number: </label>
+                <input type="tel" name="Phone" id = "Phone" required/ class="form-control col-5">
+                <div class="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="Reason" class = "col-6"> Reason for Inquiry: </label>
+                <select name="Reason" class="form-control col-5">
+                    <option value="Catering">Catering</option>
+                    <option value="Booking">Booking</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="Additional Information" class = "col-6"> Additional Information: </label>
+                <textarea name="Additional Information" height: 100px class="form-control col-5"></textarea>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="past" class = "col-6"> Have you been to the restaurant? </label>
+                <ul>
+                  <li>
+                    <input type="radio" name="past" value="Yes" checked /> Yes
+                  </li>
+                  <li>
+                    <input type="radio" name="past" value="No" /> No
+                  </li>
+                </ul>
+            </div>
+
+            <div class="form-row" style="margin-left:0">
+                <label for="ContactDay" class = "col-6"> What is the best day to contact you: </label>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Monday"> Monday
+                  </li>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Tuesday"> Tuesday
+                  </li>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Wednesday"> Wednesday
+                  </li>
+                  <li >
+                    <input type="checkbox" name="ContactDay" value="Thursday"> Thursday
+                  </li>
+                  <li>
+                    <input type="checkbox" name="ContactDay" value="Friday"> Friday
+                  </li>
+                </ul>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <button type="submit" id="submitButton" class="btn btn-primary">
+                        Submit
+                    </button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+          </form>
+        </div>
+
+
+        <footer>
+          <h3> The street, London, UK, SE1 00A </h3>
+          <p> 020 555 1234 </p>
+        </footer>
+
+        <script src="scripts\contact_form.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <noscript>
+            alert("You have javascript disabled. This will effect your viewing experience.");
+        </noscript>
+    </body>
+</html>
