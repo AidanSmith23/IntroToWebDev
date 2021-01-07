@@ -21,19 +21,14 @@
     </head>
 
     <body>
-      <nav id="navbar" >
-        <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
-        <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
-        <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
-        <div class = "clear-float"></div>
-      </nav>
+
 
       <div class="wrapper" id="page">
       <header class="section parallax bg1">
         <div class="darken-pseudo darken-with-text fill">
-          <div style="padding-top:20%; padding-left:10%;">
+          <div style="padding-top:300px; padding-left:10%;">
             <h1>The Restaurant</h1>
-            <h2 class="font-italic">Best Korean BBQ</h2>
+            <h2>Best Korean BBQ</h2>
           </div>
         </div>
       </header>
@@ -45,12 +40,14 @@
            <a href="https://www.google.com/maps/place/Jinseon+Korean+BBQ+Restaurant+%26+Bar/@52.40996,-1.5103307,17z/data=!3m1!4b1!4m5!3m4!1s0x48774bbb8c749dc1:0x41808c4fa13b7504!8m2!3d52.40996!4d-1.508142" target="_blank">
              <div class="map">
                <div class="scene">
-                 <i class="fas fa-map-pin pin"></i>
                  <div class="wave move" id="far"></div>
                  <div class="island"></div>
                  <div class="wave move" id="middle"></div>
                  <div class="boat move"  id = "boat"></div>
                  <div class="wave move" id="near"></div>
+                 <div class="cloud1 move" id="cloud1"></div>
+                 <div class="cloud2 move" id="cloud2"></div>
+                 <i class="fas fa-map-pin pin"></i>
                </div>
              </div>
            </a>
@@ -66,83 +63,39 @@
         </div>
 
 
-        <div style = "height:2800px; position: relative">
-          <div style = "height:2800px; width: 100%; background-color: pink; position:absolute;padding-top: 20px;">
-            <div id = "howto1">
-
-              <div style="height:800px;width:10%; min-width:100px;">
-                <div style="width:50%; margin:0 auto">
-                  <p class="numberCircle1">1</p>
-                  <p class="rotate"><span>Come in</span> </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div style = "height:2200px; width: 90%; background-color: red; margin-left:10%; position: absolute; bottom: 0;padding-top: 20px;">
-            <div id = "howto2">
-              <div style="height:800px;width:10%; min-width:100px;">
-                <div style="width:50%; margin:0 auto">
-                  <p class="numberCircle2">2</p>
-                  <p class="rotate"><span>Order</span> </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style = "height:1600px; width: 80%; background-color: purple; margin-left:20%; position: absolute; bottom: 0;padding-top: 20px;">
-            <div id = "howto3">
-              <div style="height:800px;width:10%; min-width:100px;">
-                <div style="width:50%; margin:0 auto">
-                  <p class="numberCircle3">3</p>
-                  <p class="rotate"><span>Cook your own</span> </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style = "height:1000px; width: 70%; background-color: yellow; margin-left:30%; position: absolute; bottom: 0;padding-top: 20px;">
-            <div id = "howto4">
-              <div style="height:800px;width:10%; min-width:100px;">
-                <div style="width:50%; margin:0 auto">
-                  <p class="numberCircle4">4</p>
-                  <p class="rotate"><span>Enjoy</span> </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class = "static" style = "height:2800px; position: relative; overflow: hidden">
+          <div id="howtoback1" class = "howtoback"></div>
+          <!--<div id="howtoback2" class = "howtoback"></div>
+          <div id="howtoback3" class = "howtoback"></div>
+          <div id="howtoback4" class = "howtoback"></div>-->
         </div>
 
 
-
-
-
-        <div id="review_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div id="review_carousel" class="carousel slide static" data-ride="carousel" data-interval="false" style="position: relative; height:300px; background: white; padding-left:10%; padding-right:10%;">
 
           <ul class="carousel-indicators">
-            <li data-target="#review_carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#review_carousel" data-slide-to="1"></li>
-            <li data-target="#review_carousel" data-slide-to="2"></li>
+            <li data-target="#review_carousel" data-slide-to="0" class="active colour"></li>
+            <li data-target="#review_carousel" data-slide-to="1" class="colour"></li>
+            <li data-target="#review_carousel" data-slide-to="2" class="colour"></li>
           </ul>
 
-          <div class="carousel-inner">
+          <div class="carousel-inner center">
             <div class="carousel-item active">
-              <a href="https://www.google.com/maps/contrib/112689847047022796464/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.40996,-1.508142,17z/data=!3m1!4b1" id = "review" target="_blank" class="center">
-              <p> <i class="fas fa-user-alt"></i> A Walker</p>
-              <p> "good quality tasty food" </p>
-              <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+              <a href="https://www.google.com/maps/contrib/112689847047022796464/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.40996,-1.508142,17z/data=!3m1!4b1" id = "review" target="_blank">
+                <p> <i class="fas fa-user-alt"></i> A Walker</p>
+                <p> "good quality tasty food" </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
               </a>
             </div>
             <div class="carousel-item">
-              <a href="https://www.google.com/maps/contrib/111310809322185586726/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.40996,-10.4729858,5z/data=!4m6!1m5!8m4!1e1!2s111310809322185586726!3m1!1e1?hl=en-GB" id = "review" target="_blank" class="center">
+              <a href="https://www.google.com/maps/contrib/111310809322185586726/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.40996,-10.4729858,5z/data=!4m6!1m5!8m4!1e1!2s111310809322185586726!3m1!1e1?hl=en-GB" id = "review" target="_blank">
               <p> <i class="fas fa-user-alt"></i> Emily Thompson</p>
               <p> "amazing food and a really good portion" </p>
               <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
               </a>
             </div>
             <div class="carousel-item">
-              <a href="https://www.google.com/maps/contrib/106648280435057884435/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.4131315,-1.5688978,11z/data=!4m6!1m5!8m4!1e1!2s106648280435057884435!3m1!1e1?hl=en-GB" id = "review" target="_blank" class="center">
+              <a href="https://www.google.com/maps/contrib/106648280435057884435/place/ChIJwZ10jLtLd0gRBHU7oU-MgEE/@52.4131315,-1.5688978,11z/data=!4m6!1m5!8m4!1e1!2s106648280435057884435!3m1!1e1?hl=en-GB" id = "review" target="_blank">
               <p> <i class="fas fa-user-alt"></i> Holly T</p>
               <p> "Cook the food yourself" </p>
               <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
@@ -150,25 +103,78 @@
             </div>
           </div>
 
-          <a class="carousel-control-prev" href="#review_carousel" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+          <a class="carousel-control-prev" href="#review_carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
+            <i class="fas fa-chevron-left"></i>
           </a>
-          <a class="carousel-control-next" href="#review_carousel" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
+          <a class="carousel-control-next" href="#review_carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
+            <i class="fas fa-chevron-right"></i>
           </a>
 
         </div>
+        <div class="section parallax bg3">
+            <div class="darken-pseudo darken-with-text fill" class="relative">
+                <div class="fix_bottom">
+                  <h3> The street, London, UK, SE1 00A </h3>
+                  <p> 020 555 1234 </p>
+              </div>
+            </div>
 
-        <footer class="hpimg3 darken-pseudo darken-with-text parent">
-          <div class="wrapper">
-            <div class="fix_bottom near">
-              <h3> The street, London, UK, SE1 00A </h3>
-              <p> 020 555 1234 </p>
+        </div>
+    </div>
+
+    <div style = "height:2800px; position: fixed; z-index:2;top:1640px; border:solid red; width:100%;">
+      <div id="howtoback1" class = "howtoback"></div>
+      <div id="howtoback2" class = "howtoback"></div>
+      <div id="howtoback3" class = "howtoback"></div>
+      <div id="howtoback4" class = "howtoback"></div>
+    </div>
+
+    <nav id="navbar2" style = "top: 60px">
+      <p>tester</p>
+    </nav>
+
+        <div id = "howto1" class="howto">
+          <div class="column">
+            <div class="hcentre">
+              <p class="numberCircle circle1">1</p>
+              <p class="rotate"><span>Come in</span> </p>
             </div>
           </div>
-        </footer>
-
         </div>
+
+        <div id = "howto2" class="howto">
+          <div class="column">
+            <div class="hcentre">
+              <p class="numberCircle circle2">2</p>
+              <p class="rotate"><span>Order</span> </p>
+            </div>
+          </div>
+        </div>
+
+        <div id = "howto3" class="howto">
+          <div class="column">
+            <div class="hcentre">
+              <p class="numberCircle circle3">3</p>
+              <p class="rotate"><span>Cook your own</span> </p>
+            </div>
+          </div>
+        </div>
+
+        <div id = "howto4" class="howto">
+          <div class="column">
+            <div class="hcentre">
+              <p class="numberCircle circle4">4</p>
+              <p class="rotate"><span>Enjoy</span> </p>
+            </div>
+          </div>
+        </div>
+
+        <nav id="navbar" >
+          <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
+          <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
+          <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
+          <div class = "clear-float"></div>
+        </nav>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -193,6 +199,8 @@
           var near = document.getElementById("near");
           var middle = document.getElementById("middle");
           var far = document.getElementById("far");
+          var cloud1 = document.getElementById("cloud1");
+          var cloud2 = document.getElementById("cloud2");
 
           var $foo = $("#page");
           navbar.style.width = $foo.prop("clientWidth")+"px";
@@ -203,15 +211,14 @@
           }
 
           function myFunction() {
-            if (page.scrollTop >= 3420){
-              howto1.classList.remove("sticky2");
-              howto2.classList.remove("sticky2");
-              howto3.classList.remove("sticky2");
-              howto4.classList.remove("sticky2");
-              howto1.classList.add("fix1");
-              howto2.classList.add("fix2");
-              howto3.classList.add("fix3");
-              howto4.classList.add("fix4");
+
+            var windowTop = page.scrollTop;
+
+            if (page.scrollTop >= 3430){
+              howto1.style.top = (3520-page.scrollTop)+"px";
+              howto2.style.top = (3520-page.scrollTop)+"px";
+              howto3.style.top = (3520-page.scrollTop)+"px";
+              howto4.style.top = (3520-page.scrollTop)+"px";
             }else{
               if (page.scrollTop  >= 530) {
                 navbar.classList.add("sticky");
@@ -221,33 +228,28 @@
                 navbar.style.top = (530-page.scrollTop)+"px";
               }
 
-              if (page.scrollTop  >= 1220) {
-                howto1.classList.remove("fix1");
-                howto1.classList.add("sticky2");
+              if (page.scrollTop  >= 1550) {
+                howto1.style.top = 90+"px";
               } else {
-                howto1.classList.remove("sticky2");
-                howto1.classList.remove("fix1");
+                howto1.style.top = (1640-page.scrollTop)+"px";
               }
-              if (page.scrollTop  >= 1820) {
-                howto2.classList.remove("fix2");
-                howto2.classList.add("sticky2");
+
+              if (page.scrollTop  >= 2150) {
+                howto2.style.top = 90+"px";
               } else {
-                howto2.classList.remove("sticky2");
-                howto2.classList.remove("fix2");
+                howto2.style.top = (2240-page.scrollTop)+"px";
               }
-              if (page.scrollTop  >= 2420) {
-                howto3.classList.remove("fix3");
-                howto3.classList.add("sticky2");
+
+              if (page.scrollTop  >= 2750) {
+                howto3.style.top = 90+"px";
               } else {
-                howto3.classList.remove("sticky2");
-                howto3.classList.remove("fix3");
+                howto3.style.top = (2840-page.scrollTop)+"px";
               }
-              if (page.scrollTop  >= 3020){
-                howto4.classList.remove("fix4");
-                howto4.classList.add("sticky2");
+
+              if (page.scrollTop  >= 3350){
+                howto4.style.top = 90+"px";
               } else {
-                howto4.classList.remove("sticky2");
-                howto4.classList.remove("fix4");
+                howto4.style.top = (3440-page.scrollTop)+"px";
               }
             }
 
@@ -268,15 +270,14 @@
             howto3.addEventListener("click", scroll3);
             howto4.addEventListener("click", scroll4);
 
-            var windowTop = page.scrollTop;
             var leftboat = windowTop - 300;
             boat.style.left= leftboat+"px";
-            near.style.left= -((windowTop*0.2)%40)+"px";
-            middle.style.left= -((windowTop*0.1)%40)+"px";
-            far.style.left= -((windowTop*0.05)%40)+"px";
+            near.style.left= -((windowTop*0.4)%40)+"px";
+            middle.style.left= -((windowTop*0.2)%40)+"px";
+            far.style.left= -((windowTop*0.1)%40)+"px";
 
-
-
+            cloud1.style.right= ((windowTop*0.1)-300)+"px";
+            cloud2.style.right= (-(windowTop*0.2)-1000)+"px";
 
 
           }
