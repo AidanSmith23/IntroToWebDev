@@ -9,6 +9,8 @@ function validate() {
         return false;
     }
 
+    alert("Message sent");
+
     // We always return false so that the form doesn't submit.
     // Submission causes the page to reload.
     return false;

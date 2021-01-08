@@ -49,7 +49,7 @@ nav {
   color:white;
   position:fixed;
   top: 530px;
-  z-index: 5;
+  z-index: 10;
 }
 
 nav .btn {
@@ -160,7 +160,7 @@ nav .btn:visited{
 }
 
 .sticky {
-  z-index: 5;
+  z-index: 10;
   height:70px;
   background-color: black;
   width:103.9%;
@@ -315,7 +315,7 @@ nav .btn:visited{
   text-align: center;
 }
 
-.carousel-item a{
+#review_carousel .carousel-item a{
   color: black;
   font-size: 20px;
 }
@@ -327,6 +327,10 @@ nav .btn:visited{
 
 .carousel-indicators .colour {
   background-color: grey;
+}
+
+.carousel {
+  z-index: 1;
 }
 
 .carousel-indicators .active {
@@ -426,4 +430,41 @@ nav .btn:visited{
 .info a: hover{
   font-style: underline;
 }
-  
+
+#news_carousel .carousel-item, #news_carousel .carousel-item a{
+  background-color:blue;
+  height:300px;
+  padding-top: 130px;
+  color:black;
+}
+
+#news_carousel .carousel-inner{
+  background-color:blue;
+  font-size: calc(80% + 1vw);
+  font-family: helvetica;
+}
+
+#news_carousel .christmas {
+  background-color:red;
+}
+
+.page-title {
+  height:200px;
+  background-color: black;
+  color: white;
+  padding-left: 10%;
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+.menu-section{
+  padding-left:10%;
+  padding-right:10%;
+  padding-bottom: 100px;
+}
+
+.menu-heading {
+  padding-top:20px;
+  padding-bottom: 20px;
+  background-color: red;
+}

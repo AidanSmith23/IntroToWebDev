@@ -68,12 +68,21 @@
           <div class = "clear-float"></div>
         </nav>
 
-        <div id="contact_carousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
+        <div id="news_carousel" class="carousel slide" data-ride="carousel" data-interval="false" style="position: relative; height:300px; padding-left:10%; padding-right:10%;">
+
+          <ul class="carousel-indicators">
+            <li data-target="#news_carousel" data-slide-to="0" class="active colour"></li>
+            <li data-target="#news_carousel" data-slide-to="1" class="colour"></li>
+            <li data-target="#news_carousel" data-slide-to="2" class="colour"></li>
+          </ul>
+
+          <div class="carousel-inner center">
             <div class="carousel-item active">
-              <strong><i class="fas fa-people-carry"></i> We're opening a new location! <i class="fas fa-people-carry"></i></strong>
+              <a href="https://www.google.com/maps/place/Jinseon+Korean+BBQ+Restaurant+%26+Bar/@52.40996,-1.5103307,17z/data=!3m1!4b1!4m5!3m4!1s0x48774bbb8c749dc1:0x41808c4fa13b7504!8m2!3d52.40996!4d-1.508142" target="_blank">
+                <strong><i class="fas fa-people-carry"></i> We're opening a new location! <i class="fas fa-people-carry"></i></strong>
+              </a>
             </div>
-            <div class="carousel-item Christmas">
+            <div class="carousel-item christmas" >
               <strong>We're rolling out our seasonal menu, with special options for this season.</strong>
             </div>
             <div class="carousel-item">
@@ -81,10 +90,15 @@
             </div>
           </div>
 
-          <a class="carousel-control-prev" href="#contact_carousel" data-slide="prev"></a>
-          <a class="carousel-control-next" href="#contact_carousel" data-slide="next"></a>
+          <a class="carousel-control-prev" href="#news_carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+          <a class="carousel-control-next" href="#news_carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
+            <i class="fas fa-chevron-right"></i>
+          </a>
 
         </div>
+
 
         <h4>Contact Form</h4>
 
