@@ -4,13 +4,10 @@ Date created: 30/11/2020
 Date last modified: 30/11/2020
 */
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
     font-family: helvetica, arial;
-    color: #0d1f2d;
+    color: black;
     min-width: 200px;
     width: 100%;
     margin: 0 auto;
@@ -85,6 +82,8 @@ nav .btn:visited{
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 2px;
+  z-index:2;
+  position: relative;
 }
 .section {
   position: relative;
@@ -347,28 +346,23 @@ nav .btn:visited{
 
 .howto {
   position:fixed;
-  z-index:2;
+  width:10%;
 }
 
 #howto1 {
-  padding-left:10%;
   top:1620px;
 }
 
 #howto2 {
-  margin-left:20%;
   top:2220px;
 }
 
 #howto3 {
-  margin-left:30%;
   top:2820px;
 }
 
 #howto4 {
-  margin-left:40%;
   top:3420px;
-  z-index: 0;
 }
 
 .column {
@@ -384,8 +378,10 @@ nav .btn:visited{
 }
 
 #howtoback1 {
+  height: 100%;
+  width:100%;
   background-color: pink;
-  z-index: 1;
+  padding-left:10%;
 }
 
 #howtoback2 {
@@ -393,7 +389,6 @@ nav .btn:visited{
   width: 90%;
   background-color: red;
   margin-left:20%;
-  z-index: 2;
 }
 
 #howtoback3 {
@@ -401,7 +396,6 @@ nav .btn:visited{
   width: 80%;
   background-color: purple;
   margin-left:30%;
-  z-index: 3;
 }
 
 #howtoback4 {
@@ -409,12 +403,27 @@ nav .btn:visited{
   width: 70%;
   background-color: yellow;
   margin-left:40%;
-  z-index: 4;
 }
 
 .howtoback {
   position:absolute;
   bottom: 0;
-  height: 100%;
-  width:100%;
 }
+
+.info {
+    font-size: calc(80% + 1vw);
+    font-family: helvetica;
+    margin-left:100px;
+    padding-left: 5%;
+    margin-top:50px;
+    width: 50%;
+}
+
+.info a{
+  color: black;
+}
+
+.info a: hover{
+  font-style: underline;
+}
+  

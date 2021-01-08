@@ -23,18 +23,25 @@
     <body>
 
 
-      <div class="wrapper" id="page">
-      <header class="section parallax bg1">
-        <div class="darken-pseudo darken-with-text fill">
-          <div style="padding-top:300px; padding-left:10%;">
-            <h1>The Restaurant</h1>
-            <h2>Best Korean BBQ</h2>
+      <div class="wrapper" id="page" style="z-index:2">
+        <header class="section parallax bg1">
+          <div class="darken-pseudo darken-with-text fill">
+            <div style="padding-top:300px; padding-left:10%;">
+              <h1>The Restaurant</h1>
+              <h2>Best Korean BBQ</h2>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
 
-        <div class="news static">
+        <nav id="navbar" >
+          <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
+          <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
+          <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
+          <div class = "clear-float"></div>
+        </nav>
+
+        <div class="news">
       	   <h4>Big News</h4>
       		 <h2>We're opening in a new location </h2>
            <a href="https://www.google.com/maps/place/Jinseon+Korean+BBQ+Restaurant+%26+Bar/@52.40996,-1.5103307,17z/data=!3m1!4b1!4m5!3m4!1s0x48774bbb8c749dc1:0x41808c4fa13b7504!8m2!3d52.40996!4d-1.508142" target="_blank">
@@ -63,15 +70,68 @@
         </div>
 
 
-        <div class = "static" style = "height:2800px; position: relative; overflow: hidden">
-          <div id="howtoback1" class = "howtoback"></div>
-          <!--<div id="howtoback2" class = "howtoback"></div>
-          <div id="howtoback3" class = "howtoback"></div>
-          <div id="howtoback4" class = "howtoback"></div>-->
+        <div style = "height:2800px; position: relative;">
+          <div id="howtoback1" class = "howtoback">
+            <div id = "howto1" class="howto">
+              <div class="column">
+                <div class="hcentre">
+                  <p class="numberCircle circle1">1</p>
+                  <p class="rotate"><span>Come in</span> </p>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <p>Come in and wait to be seated. One of our friendly staff will great you by the door and walk you to your table as soon as it is free.</p>
+              <p>Don't be scared by your table's setup, it will not be like your normal restaurant.</p>
+            </div>
+          </div>
+          <div id="howtoback2" class = "howtoback">
+            <div id = "howto2" class="howto">
+              <div class="column">
+                <div class="hcentre">
+                  <p class="numberCircle circle2">2</p>
+                  <p class="rotate"><span>Order</span> </p>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <p>Your waiter will talk you through the menu and will give any suggestions if you wish.</p>
+              <p><a href="Menu.html">You can see our menu here.</a></p>
+              <p>Once you are ready, a waiter will come and take your order.</p>
+            </div>
+          </div>
+          <div id="howtoback3" class = "howtoback">
+            <div id = "howto3" class="howto">
+              <div class="column">
+                <div class="hcentre">
+                  <p class="numberCircle circle3">3</p>
+                  <p class="rotate"><span>Cook your own</span> </p>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <p>While you wait for your main, a selection of complementary starters will be brought to your table.</p>
+              <p>Also, our waiters will transform your table into your bbq.</p>
+              <p>When your food is ready, it will be brought to you to cook, but don't worry, our staff will also be moving from table to table to help.</p>
+            </div>
+          </div>
+          <div id="howtoback4" class = "howtoback">
+            <div id = "howto4" class="howto">
+              <div class="column">
+                <div class="hcentre">
+                  <p class="numberCircle circle4">4</p>
+                  <p class="rotate"><span>Enjoy</span> </p>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <p>Now, just sit back and enjoy your food however you wish.</p>
+            </div>
+          </div>
         </div>
 
 
-        <div id="review_carousel" class="carousel slide static" data-ride="carousel" data-interval="false" style="position: relative; height:300px; background: white; padding-left:10%; padding-right:10%;">
+        <div id="review_carousel" class="carousel slide" data-ride="carousel" data-interval="false" style="position: relative; height:300px; background: white; padding-left:10%; padding-right:10%;">
 
           <ul class="carousel-indicators">
             <li data-target="#review_carousel" data-slide-to="0" class="active colour"></li>
@@ -111,6 +171,7 @@
           </a>
 
         </div>
+
         <div class="section parallax bg3">
             <div class="darken-pseudo darken-with-text fill" class="relative">
                 <div class="fix_bottom">
@@ -122,59 +183,13 @@
         </div>
     </div>
 
-    <div style = "height:2800px; position: fixed; z-index:2;top:1640px; border:solid red; width:100%;">
-      <div id="howtoback1" class = "howtoback"></div>
-      <div id="howtoback2" class = "howtoback"></div>
-      <div id="howtoback3" class = "howtoback"></div>
-      <div id="howtoback4" class = "howtoback"></div>
-    </div>
 
-    <nav id="navbar2" style = "top: 60px">
-      <p>tester</p>
-    </nav>
 
-        <div id = "howto1" class="howto">
-          <div class="column">
-            <div class="hcentre">
-              <p class="numberCircle circle1">1</p>
-              <p class="rotate"><span>Come in</span> </p>
-            </div>
-          </div>
-        </div>
 
-        <div id = "howto2" class="howto">
-          <div class="column">
-            <div class="hcentre">
-              <p class="numberCircle circle2">2</p>
-              <p class="rotate"><span>Order</span> </p>
-            </div>
-          </div>
-        </div>
 
-        <div id = "howto3" class="howto">
-          <div class="column">
-            <div class="hcentre">
-              <p class="numberCircle circle3">3</p>
-              <p class="rotate"><span>Cook your own</span> </p>
-            </div>
-          </div>
-        </div>
 
-        <div id = "howto4" class="howto">
-          <div class="column">
-            <div class="hcentre">
-              <p class="numberCircle circle4">4</p>
-              <p class="rotate"><span>Enjoy</span> </p>
-            </div>
-          </div>
-        </div>
 
-        <nav id="navbar" >
-          <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
-          <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
-          <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
-          <div class = "clear-float"></div>
-        </nav>
+
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -214,56 +229,50 @@
 
             var windowTop = page.scrollTop;
 
-            if (page.scrollTop >= 3430){
-              howto1.style.top = (3520-page.scrollTop)+"px";
-              howto2.style.top = (3520-page.scrollTop)+"px";
-              howto3.style.top = (3520-page.scrollTop)+"px";
-              howto4.style.top = (3520-page.scrollTop)+"px";
-            }else{
-              if (page.scrollTop  >= 530) {
-                navbar.classList.add("sticky");
-                navbar.style.top = 0;
+            if (page.scrollTop  >= 530) {
+              navbar.classList.add("sticky");
+              navbar.style.top = (page.scrollTop)+"px";
+            } else {
+              navbar.classList.remove("sticky");
+              navbar.style.top = 530 +"px";
+            }
+            if (page.scrollTop <= 3430){
+              if (page.scrollTop  >= 1530) {
+                howto1.style.top = (page.scrollTop + 90)+"px";
               } else {
-                navbar.classList.remove("sticky");
-                navbar.style.top = (530-page.scrollTop)+"px";
+                howto1.style.top = 1620 + "px";
               }
 
-              if (page.scrollTop  >= 1550) {
-                howto1.style.top = 90+"px";
+              if (page.scrollTop  >= 2130) {
+                howto2.style.top = (page.scrollTop + 90)+"px";
               } else {
-                howto1.style.top = (1640-page.scrollTop)+"px";
+                howto2.style.top = 2220 + "px";
               }
 
-              if (page.scrollTop  >= 2150) {
-                howto2.style.top = 90+"px";
+              if (page.scrollTop  >= 2730) {
+                howto3.style.top = (page.scrollTop + 90)+"px";
               } else {
-                howto2.style.top = (2240-page.scrollTop)+"px";
+                howto3.style.top = 2820 + "px";
               }
 
-              if (page.scrollTop  >= 2750) {
-                howto3.style.top = 90+"px";
+              if (page.scrollTop  >= 3330){
+                howto4.style.top = (page.scrollTop + 90)+"px";
               } else {
-                howto3.style.top = (2840-page.scrollTop)+"px";
-              }
-
-              if (page.scrollTop  >= 3350){
-                howto4.style.top = 90+"px";
-              } else {
-                howto4.style.top = (3440-page.scrollTop)+"px";
+                howto4.style.top = 3420 + "px";
               }
             }
 
             function scroll1 (){
-              page.scrollTo(0, 1220)
+              page.scrollTo({top: 1530,  behavior: 'smooth'});
             }
             function scroll2 (){
-              page.scrollTo(0, 1820)
+              page.scrollTo({top: 2130,  behavior: 'smooth'});
             }
             function scroll3 (){
-              page.scrollTo(0, 2420)
+              page.scrollTo({top: 2730,  behavior: 'smooth'});
             }
             function scroll4 (){
-              page.scrollTo(0, 3020)
+              page.scrollTo({top: 3330,  behavior: 'smooth'});
             }
             howto1.addEventListener("click", scroll1);
             howto2.addEventListener("click", scroll2);
@@ -278,6 +287,7 @@
 
             cloud1.style.right= ((windowTop*0.1)-300)+"px";
             cloud2.style.right= (-(windowTop*0.2)-1000)+"px";
+
 
 
           }

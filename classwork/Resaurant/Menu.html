@@ -26,37 +26,58 @@
     </head>
 
     <body>
-      <header>
-          <h1>The Restaurant</h1>
-          <h2 class="font-italic">Best Korean BBQ</h2>
-          <h3 class="text-right mt-5">The Street, London</h3>
-      </header>
+      <div class="wrapper" id="page" style="z-index:2">
+        <header class="section parallax bg1">
+          <div class="darken-pseudo darken-with-text fill">
+            <div style="padding-top:300px; padding-left:10%;">
+              <h1>The Restaurant</h1>
+              <h2>Best Korean BBQ</h2>
+            </div>
+          </div>
+        </header>
 
-        <nav>
-          <a class = "btn fas fa-home" href="Home.html" id = "Home" style = "font-size:24px" ></a>
-          <a class = "btn" href="Menu.html" id = "Menu" style = "background-color:#3C78AB"> Menu </a>
-          <a class = "btn" href="Contact Us.html" id = "Contact Us"> Contact Us </a>
+
+        <nav id="navbar" >
+          <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
+          <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
+          <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
           <div class = "clear-float"></div>
         </nav>
 
-        <div id="menu_carousel" class="carousel slide" data-ride="carousel">
 
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <strong><i class="fas fa-people-carry"></i> We're opening a new location! <i class="fas fa-people-carry"></i></strong>
+
+        <div id="news_carousel" class="carousel slide" data-ride="carousel" data-interval="false" style="position: relative; height:300px; padding-left:10%; padding-right:10%;">
+
+          <ul class="carousel-indicators">
+            <li data-target="#news_carousel" data-slide-to="0" class="active colour"></li>
+            <li data-target="#news_carousel" data-slide-to="1" class="colour"></li>
+            <li data-target="#news_carousel" data-slide-to="2" class="colour"></li>
+          </ul>
+
+          <div class="center " style="width:100%; height:100% ">
+            <div class="carousel-inner" style="border:solid black;">
+              <div class="carousel-item active" style=" background-color:blue;">
+                <strong><i class="fas fa-people-carry"></i> We're opening a new location! <i class="fas fa-people-carry"></i></strong>
+              </div>
+              <div class="carousel-item Christmas">
+                <strong>We're rolling out our seasonal menu, with special options for this season.</strong>
+              </div>
+              <div class="carousel-item">
+                <strong> <i class="fas fa-cocktail"></i> The Drink of the Month is TSG Special Brew. <i class="fas fa-cocktail"></i></strong>
+              </div>
             </div>
-            <div class="carousel-item Christmas">
-              <strong>We're rolling out our seasonal menu, with special options for this season.</strong>
-            </div>
-            <div class="carousel-item">
-              <strong> <i class="fas fa-cocktail"></i> The Drink of the Month is TSG Special Brew. <i class="fas fa-cocktail"></i></strong>
-            </div>
+
           </div>
 
-          <a class="carousel-control-prev" href="#menu_carousel" data-slide="prev"></a>
-          <a class="carousel-control-next" href="#menu_carousel" data-slide="next"></a>
+          <a class="carousel-control-prev" href="#news_carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+          <a class="carousel-control-next" href="#news_carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
+            <i class="fas fa-chevron-right"></i>
+          </a>
 
         </div>
+
 
         <h4> Menu </h4>
 
@@ -119,10 +140,17 @@
           </div>
         </div>
 
-          <footer>
-            <h3> The street, London, UK, SE1 00A </h3>
-            <p> 020 555 1234 </p>
-          </footer>
+        <div class="section parallax bg3">
+            <div class="darken-pseudo darken-with-text fill" class="relative">
+                <div class="fix_bottom">
+                  <h3> The street, London, UK, SE1 00A </h3>
+                  <p> 020 555 1234 </p>
+              </div>
+            </div>
+
+        </div>
+
+          </div>
 
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -130,5 +158,100 @@
           <noscript>
               alert("You have javascript disabled. This will effect your viewing experience.");
           </noscript>
+
+          <script>
+            document.querySelector('.wrapper').addEventListener('scroll',myFunction);
+            window.addEventListener('resize', resize);
+
+            var navbar = document.getElementById("navbar");
+            var howto1 = document.getElementById("howto1");
+            var howto2 = document.getElementById("howto2");
+            var howto3 = document.getElementById("howto3");
+            var howto4 = document.getElementById("howto4");
+            var page = document.getElementById("page");
+            var boat = document.getElementById("boat");
+            var near = document.getElementById("near");
+            var middle = document.getElementById("middle");
+            var far = document.getElementById("far");
+            var cloud1 = document.getElementById("cloud1");
+            var cloud2 = document.getElementById("cloud2");
+
+            var $foo = $("#page");
+            navbar.style.width = $foo.prop("clientWidth")+"px";
+
+            function resize() {
+              $foo = $("#page");
+              navbar.style.width = $foo.prop("clientWidth")+"px";
+            }
+
+            function myFunction() {
+
+              var windowTop = page.scrollTop;
+
+              if (page.scrollTop  >= 530) {
+                navbar.classList.add("sticky");
+                navbar.style.top = (page.scrollTop)+"px";
+              } else {
+                navbar.classList.remove("sticky");
+                navbar.style.top = 530 +"px";
+              }
+              if (page.scrollTop <= 3430){
+                if (page.scrollTop  >= 1530) {
+                  howto1.style.top = (page.scrollTop + 90)+"px";
+                } else {
+                  howto1.style.top = 1620 + "px";
+                }
+
+                if (page.scrollTop  >= 2130) {
+                  howto2.style.top = (page.scrollTop + 90)+"px";
+                } else {
+                  howto2.style.top = 2220 + "px";
+                }
+
+                if (page.scrollTop  >= 2730) {
+                  howto3.style.top = (page.scrollTop + 90)+"px";
+                } else {
+                  howto3.style.top = 2820 + "px";
+                }
+
+                if (page.scrollTop  >= 3330){
+                  howto4.style.top = (page.scrollTop + 90)+"px";
+                } else {
+                  howto4.style.top = 3420 + "px";
+                }
+              }
+
+              function scroll1 (){
+                page.scrollTo({top: 1530,  behavior: 'smooth'});
+              }
+              function scroll2 (){
+                page.scrollTo({top: 2130,  behavior: 'smooth'});
+              }
+              function scroll3 (){
+                page.scrollTo({top: 2730,  behavior: 'smooth'});
+              }
+              function scroll4 (){
+                page.scrollTo({top: 3330,  behavior: 'smooth'});
+              }
+              howto1.addEventListener("click", scroll1);
+              howto2.addEventListener("click", scroll2);
+              howto3.addEventListener("click", scroll3);
+              howto4.addEventListener("click", scroll4);
+
+              var leftboat = windowTop - 300;
+              boat.style.left= leftboat+"px";
+              near.style.left= -((windowTop*0.4)%40)+"px";
+              middle.style.left= -((windowTop*0.2)%40)+"px";
+              far.style.left= -((windowTop*0.1)%40)+"px";
+
+              cloud1.style.right= ((windowTop*0.1)-300)+"px";
+              cloud2.style.right= (-(windowTop*0.2)-1000)+"px";
+
+
+
+            }
+
+
+          </script>
     </body>
 </html>
