@@ -15,8 +15,7 @@
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
-      <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
       <style>
         hr{
@@ -81,12 +80,12 @@
           <h4> Menu </h4>
         </div>
 
-        <div class="" style="text-align:center">
-          <div class="menu-section">
-            <div class="menu-heading">
+        <div class = "menu">
+          <div class="menu-section" id = "menu-section1">
+            <div class="menu-heading" id="Accordion1">
               <h4>Meat</h4>
             </div>
-            <div class="row">
+            <div class="row" id="Content1">
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <p><strong>BBQ Pork Belly</strong> <br>£8.20</p>
               </div>
@@ -103,14 +102,18 @@
                 <p><strong>Beef Strips</strong> <br>£8.50</p>
               </div>
             </div>
+
+            <div class="pullbar" id="pull1">
+              <i class="fas fa-chevron-down" id="chev1"></i>
+            </div>
           </div>
 
-          <div class="menu-section">
-            <div class="menu-heading">
+          <div class="menu-section" id = "menu-section2">
+            <div class="menu-heading" id="Accordion2">
               <h4>Sides</h4>
             </div>
 
-            <div class="row">
+            <div class="row" id="Content2">
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <p><strong>Bap</strong> <br>£2.00</p>
               </div>
@@ -127,14 +130,18 @@
                 <p><strong>KFC</strong> <br>£5.20</p>
               </div>
             </div>
+
+            <div class="pullbar" id = "pull2">
+              <i class="fas fa-chevron-down" id="chev2"></i>
+            </div>
           </div>
 
-          <div class="menu-section">
-            <div class="menu-heading">
+          <div class="menu-section" id = "menu-section3">
+            <div class="menu-heading" id="Accordion3">
               <h4>Drinks</h4>
             </div>
 
-            <div class="row">
+            <div class="row" id="Content3">
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <p><strong>Bottled Water</strong> <br>£2.00</p>
               </div>
@@ -150,6 +157,10 @@
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <p><strong>Milk Drink</strong> <br>£2.50</p>
               </div>
+            </div>
+
+            <div class="pullbar" id="pull3">
+              <i class="fas fa-chevron-down" id="chev3"></i>
             </div>
           </div>
         </div>
@@ -167,8 +178,11 @@
           </div>
 
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
           <noscript>
               alert("You have javascript disabled. This will effect your viewing experience.");
           </noscript>
@@ -264,6 +278,47 @@
 
 
             }
+
+
+          </script>
+
+          <script>
+            var which = 0;
+            var chev = [0];
+
+            for (var i=1; i<4; i++){
+              $("#Content"+i).slideUp();
+              chev.push(document.getElementById('chev'+i));
+            }
+
+            var open = false;
+
+
+            function myAccordion(id) {
+              $("#Content"+id).slideDown(350);
+              $("#Content"+which).slideUp(350);
+
+              chev[id].className = 'fa fa-chevron-down open';
+              chev[which].className = 'fa fa-chevron-down';
+
+              if (which == id){
+                which=0;
+              } else {
+                which=id;
+              }
+            }
+
+            document.getElementById("Accordion1").addEventListener("click", function(){myAccordion(1)}, false);
+            document.getElementById("Accordion2").addEventListener("click", function(){myAccordion(2)}, false);
+            document.getElementById("Accordion3").addEventListener("click", function(){myAccordion(3)}, false);
+            document.getElementById("pull1").addEventListener("click", function(){myAccordion(1)}, false);
+            document.getElementById("pull2").addEventListener("click", function(){myAccordion(2)}, false);
+            document.getElementById("pull3").addEventListener("click", function(){myAccordion(3)}, false);
+            document.getElementById("Content1").addEventListener("click", function(){myAccordion(1)}, false);
+            document.getElementById("Content2").addEventListener("click", function(){myAccordion(2)}, false);
+            document.getElementById("Content3").addEventListener("click", function(){myAccordion(3)}, false);
+
+
 
 
           </script>

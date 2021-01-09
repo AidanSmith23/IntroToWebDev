@@ -432,14 +432,14 @@ nav .btn:visited{
 }
 
 #news_carousel .carousel-item, #news_carousel .carousel-item a{
-  background-color:blue;
+  background-color:lightblue;
   height:300px;
   padding-top: 130px;
   color:black;
 }
 
 #news_carousel .carousel-inner{
-  background-color:blue;
+  background-color:lightblue;
   font-size: calc(80% + 1vw);
   font-family: helvetica;
 }
@@ -457,14 +457,76 @@ nav .btn:visited{
   font-size: 40px;
 }
 
-.menu-section{
+.menu-heading {
   padding-left:10%;
   padding-right:10%;
-  padding-bottom: 100px;
-}
-
-.menu-heading {
   padding-top:20px;
   padding-bottom: 20px;
-  background-color: red;
+}
+
+.row {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.pullbar {
+  width:100%;
+  text-align:center;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  font-size: 20px;
+  height: 50px;
+  position:relative;
+}
+
+.fa-chevron-down{
+  transform: rotate(0deg);
+  transition: transform 0.35s linear;
+}
+
+.fa-chevron-down.open{
+  transform: rotate(180deg);
+  transition: transform 0.35s linear;
+}
+
+#Accordion1, #Content1, #pull1 {
+background-color: red;
+}
+
+#menu-section1, #Accordion2, #Content2, #pull2{
+  background-color: purple;
+}
+
+#menu-section2, #Accordion3, #Content3, #pull3{
+  background-color: yellow;
+}
+
+#menu-section3{
+  background-color: pink;
+}
+
+hr {
+  background-color: black; height: 3px; border: 0;
+}
+
+.menu {
+  text-align:center;
+  cursor: pointer;
+}
+
+#menu-section1:hover .pullbar {
+  font-size: 30px;
+}
+#Accordion1 {
+  padding-top: 30px;
+}
+
+#menu-section2:hover .pullbar {
+  font-size: 30px;
+}
+
+#menu-section3:hover .pullbar {
+  font-size: 30px;
 }
