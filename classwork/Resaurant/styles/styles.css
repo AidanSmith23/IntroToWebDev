@@ -1,7 +1,8 @@
 /*
-Creator: Aidan Smith
-Date created: 30/11/2020
-Date last modified: 30/11/2020
+  Name: Aidan Smith
+  Assignment: Restaurant Site
+  Date Created: 27/11/2020
+  Most recent revision: 10/01/2021
 */
 
 
@@ -22,7 +23,6 @@ font-size: 5em;
 }
 
 h2 {
-  font-family: courier, helvetica, arial;
   font-size: 2em;
 }
 
@@ -32,7 +32,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 40px;
     font-weight: bold;
     padding-top: 30px;
 }
@@ -50,6 +50,7 @@ nav {
   position:fixed;
   top: 530px;
   z-index: 10;
+  width:100%;
 }
 
 nav .btn {
@@ -57,24 +58,18 @@ nav .btn {
     margin-right:20px;
     width: 25%;
     max-width: 130px;
+    color:white
 }
 
 nav .btn:hover:before{
     font-size: 20px;
     font-weight: normal;
+    font-family: sans-serif;
 }
 
 #home:hover:before {content:"Home"}
 #menu:hover:before {content:"Menu"}
-#contact:hover:before {content:"Contact Us"}
-
-nav .btn:visited{
-    color: #fef9ff;
-}
-
-.clear-float {
-  clear:both;
-}
+#contact:hover:before {content:"Contact us"}
 
 
 .wrapper {
@@ -85,6 +80,7 @@ nav .btn:visited{
   z-index:2;
   position: relative;
 }
+
 .section {
   position: relative;
   height: 600px;
@@ -125,11 +121,11 @@ nav .btn:visited{
   background-image: url('../images/floor.jpg');
 }
 
-.darken-pseudo, .darken-pseudo2{
+.darken, .darken2{
   position: relative;
 }
 
-.darken-pseudo:after, .darken-pseudo2::after {
+.darken:after, .darken2::after {
   content: '';
   position: absolute;
   top: 0;
@@ -139,15 +135,15 @@ nav .btn:visited{
   display: block;
 }
 
-.darken-pseudo::after{
+.darken::after{
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
-.darken-pseudo2::after{
+.darken2::after{
   background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
 }
 
-.darken-with-text h1, .darken-with-text h2, .darken-with-text a, .darken-with-text p, .darken-with-text h3 {
+.darken-text h1, .darken-text h2, .darken-text a, .darken-text p, .darken-text h3 {
   margin: 0;
   color: white;
   position: relative;
@@ -163,103 +159,6 @@ nav .btn:visited{
   z-index: 10;
   height:70px;
   background-color: black;
-  width:103.9%;
-}
-
-.news {
-  height: 400px;
-  background-color: lightblue;
-}
-
-.news h4, .news h2{
-  padding-left: 10%;
-}
-
-.scene {
-  position: relative;
-  padding: 40px;
-  margin: auto;
-  z-index: 2;
-  height:300px;
-}
-
-.scene .move {
-  position: absolute;
-  right: auto;
-  width: 100%;
-  background-position: center;
-}
-
-.scene .boat {
-  background: url(../images/boat.png) no-repeat;
-  background-size: auto 100%;
-  height:100px;
-  bottom: 20px;
-}
-
-.scene .cloud1 {
-  background: url(../images/cloud1.png) no-repeat;
-  background-size: auto 100%;
-  height:100px;
-  top: 30px;
-}
-
-.scene .cloud2 {
-  background: url(../images/cloud2.png) no-repeat;
-  background-size: auto 100%;
-  height:100px;
-  top: 20px;
-}
-
-.scene .wave {
-  height:40px;
-  margin-left: -40px;
-  margin-right: -40px;
-  width:150%;
-}
-
-.scene #near {
-  background: url(../images/darkwave.png);
-  background-size: 40px 100%;
-  bottom: 0px;
-}
-
-.scene #middle {
-  background: url(../images/wave.png);
-  background-size: 40px 100%;
-  bottom: 10px;
-}
-
-.scene #far {
-  background: url(../images/lightwave.png);
-  background-size: 40px 100%;
-  bottom: 20px;
-}
-
-.scene .island {
-  position: absolute;
-  width: 100%;
-  background: url(../images/island.png) no-repeat;
-  background-size: auto 100%;
-  height:150px;
-  bottom: 0px;
-  left: 40%;
-}
-
-#boat {
-  left:-1000px;
-}
-
-.pin {
-  position:absolute;
-  font-size: 100px;
-  left:40%;
-  padding-left: 50px;
-  color:black;
-}
-
-.scene:hover .pin {
-  color:red;
 }
 
 .center {
@@ -272,52 +171,11 @@ nav .btn:visited{
   text-align: center;
 }
 
-.small {
-    font-size: 25px;
-    width: 30%;
-    min-width: 250px;
-}
-
-.numberCircle {
-    width: 80px;
-    line-height: 80px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 50px;
-    border: 2px solid black;
-    background-color: black;
-}
-
-.circle1 {
-  color: pink;
-}
-
-.circle2 {
-  color: red;
-}
-
-.circle3 {
-  color: purple;
-}
-
-.circle4 {
-  color: yellow;
-}
-
-.rotate {
-  writing-mode: vertical-rl;
+.carousel {
   position: relative;
-  left: -60px;
-  top: 0;
-  font-size: 60px;
-  font-weight: 800;
-  color: black;
-  text-align: center;
-}
-
-#review_carousel .carousel-item a{
-  color: black;
-  font-size: 20px;
+  height:300px;
+  padding-left:10%;
+  padding-right:10%;
 }
 
 .carousel-item:hover a{
@@ -337,114 +195,35 @@ nav .btn:visited{
   background-color:black;
 }
 
-.fa-star {
-  color: yellow;
-}
-
-.fix_bottom {
+.fix-bottom {
   position: absolute ;
   bottom:0;
+  margin-bottom: 40px;
+}
+
+.left {
   margin-left: 10%;
-  margin-bottom: 20px;
 }
 
-.howto {
-  position:fixed;
-  width:10%;
+.right {
+  right: 10%;
+  font-size: 20px;
 }
 
-#howto1 {
-  top:1620px;
-}
-
-#howto2 {
-  top:2220px;
-}
-
-#howto3 {
-  top:2820px;
-}
-
-#howto4 {
-  top:3420px;
-}
-
-.column {
-  height:800px;
-  width:10%;
-  min-width:100px;
-  padding-left:10px;
-}
-
-.hcentre {
-  width:50%;
-  margin:0;
-}
-
-#howtoback1 {
-  height: 100%;
-  width:100%;
-  background-color: pink;
-  padding-left:10%;
-}
-
-#howtoback2 {
-  height:2200px;
-  width: 90%;
-  background-color: red;
-  margin-left:20%;
-}
-
-#howtoback3 {
-  height:1600px;
-  width: 80%;
-  background-color: purple;
-  margin-left:30%;
-}
-
-#howtoback4 {
-  height:1000px;
-  width: 70%;
-  background-color: yellow;
-  margin-left:40%;
-}
-
-.howtoback {
-  position:absolute;
-  bottom: 0;
-}
-
-.info {
-    font-size: calc(80% + 1vw);
-    font-family: helvetica;
-    margin-left:100px;
-    padding-left: 5%;
-    margin-top:50px;
-    width: 50%;
-}
-
-.info a{
-  color: black;
-}
-
-.info a: hover{
-  font-style: underline;
-}
-
-#news_carousel .carousel-item, #news_carousel .carousel-item a{
+#news-carousel .carousel-item, #news-carousel .carousel-item a{
   background-color:lightblue;
   height:300px;
   padding-top: 130px;
   color:black;
 }
 
-#news_carousel .carousel-inner{
+#news-carousel .carousel-inner{
   background-color:lightblue;
   font-size: calc(80% + 1vw);
   font-family: helvetica;
 }
 
-#news_carousel .christmas {
+#news-carousel .christmas {
   background-color:red;
 }
 
@@ -455,78 +234,4 @@ nav .btn:visited{
   padding-left: 10%;
   padding-top: 30px;
   font-size: 40px;
-}
-
-.menu-heading {
-  padding-left:10%;
-  padding-right:10%;
-  padding-top:20px;
-  padding-bottom: 20px;
-}
-
-.row {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top:10px;
-  padding-bottom:10px;
-}
-
-.pullbar {
-  width:100%;
-  text-align:center;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  font-size: 20px;
-  height: 50px;
-  position:relative;
-}
-
-.fa-chevron-down{
-  transform: rotate(0deg);
-  transition: transform 0.35s linear;
-}
-
-.fa-chevron-down.open{
-  transform: rotate(180deg);
-  transition: transform 0.35s linear;
-}
-
-#Accordion1, #Content1, #pull1 {
-background-color: red;
-}
-
-#menu-section1, #Accordion2, #Content2, #pull2{
-  background-color: purple;
-}
-
-#menu-section2, #Accordion3, #Content3, #pull3{
-  background-color: yellow;
-}
-
-#menu-section3{
-  background-color: pink;
-}
-
-hr {
-  background-color: black; height: 3px; border: 0;
-}
-
-.menu {
-  text-align:center;
-  cursor: pointer;
-}
-
-#menu-section1:hover .pullbar {
-  font-size: 30px;
-}
-#Accordion1 {
-  padding-top: 30px;
-}
-
-#menu-section2:hover .pullbar {
-  font-size: 30px;
-}
-
-#menu-section3:hover .pullbar {
-  font-size: 30px;
 }

@@ -2,8 +2,9 @@
 
 <!--
     Name: Aidan Smith
+    Assignment: Restaurant Site
     Date Created: 27/11/2020
-    Most recent revision: 27/11/2020
+    Most recent revision: 10/01/2021
 -->
 
 <html lang="en" style="text-align:center">
@@ -11,48 +12,22 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <title>Contact Us</title>
+      <title>Contact us</title>
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
-      <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link href = "styles\contact_form.css" rel = "stylesheet" type="text/css">
 
-      <style>
-        label {
-          display: inline-block;
-          text-align: right;
-          margin-right: 10px;
-          margin-top: 5px;
-        }
-
-
-        .form-row {
-          margin-top: 10px;
-        }
-
-        form
-        {
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        li {
-          list-style-type:none;
-        }
-
-        ul {
-          padding-left: 0; padding-top:5px; text-align:left;
-        }
-      </style>
     </head>
 
     <body>
-      <div class="wrapper" id="page" style="z-index:2">
+      <div class="wrapper" id="page">
+        <noscript>
+            You have javascript disabled. This will affect your viewing experience.
+        </noscript>
+
         <header class="section parallax bg1">
-          <div class="darken-pseudo darken-with-text fill">
+          <div class="darken darken-text fill">
             <div style="padding-top:300px; padding-left:10%;">
               <h1>The Restaurant</h1>
               <h2>Best Korean BBQ</h2>
@@ -65,15 +40,14 @@
           <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
           <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
           <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
-          <div class = "clear-float"></div>
         </nav>
 
-        <div id="news_carousel" class="carousel slide" data-ride="carousel" data-interval="false" style="position: relative; height:300px; padding-left:10%; padding-right:10%;">
+        <div id="news-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
           <ul class="carousel-indicators">
-            <li data-target="#news_carousel" data-slide-to="0" class="active colour"></li>
-            <li data-target="#news_carousel" data-slide-to="1" class="colour"></li>
-            <li data-target="#news_carousel" data-slide-to="2" class="colour"></li>
+            <li data-target="#news-carousel" data-slide-to="0" class="active colour"></li>
+            <li data-target="#news-carousel" data-slide-to="1" class="colour"></li>
+            <li data-target="#news-carousel" data-slide-to="2" class="colour"></li>
           </ul>
 
           <div class="carousel-inner center">
@@ -90,46 +64,47 @@
             </div>
           </div>
 
-          <a class="carousel-control-prev" href="#news_carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
+          <a class="carousel-control-prev" href="#news-carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
             <i class="fas fa-chevron-left"></i>
           </a>
-          <a class="carousel-control-next" href="#news_carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
+          <a class="carousel-control-next" href="#news-carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
             <i class="fas fa-chevron-right"></i>
           </a>
 
         </div>
 
+        <div class="page-title">
+          <h4>Contact Us</h4>
+        </div>
 
-        <h4>Contact Form</h4>
-
-        <div class="container" style="text-align:center" >
-          <form name="contact_us" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate style="width: 80%">
+        <div class="form">
+          <form name="contact-us" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate style="width: 80%">
             <div class="form-row" style="margin-left:0">
-                <label for="Name" class = "col-6"> Full name: </label>
+                <label for="Name" class = "col-6"> Name: </label>
                 <input type="text" name="Name" id = "Name" required/ class="form-control col-5" pattern="[a-zA-Z]+">
                 <div class="invalid-feedback">
                   Please enter a name (only alphabetic characters).
                 </div>
             </div>
 
-            <div class="form-row" style="margin-left:0">
-                <label for="Email" class = "col-6"> Email address: </label>
+            <div class="form-row" >
+                <label for="Email" class = "col-6"> Email: </label>
                 <input type="email" name="Email" id = "Email" required/ class="form-control col-5">
                 <div class="invalid-feedback">
                   Please enter a valid email address.
                 </div>
             </div>
 
-            <div class="form-row" style="margin-left:0">
-                <label for="Phone" class = "col-6"> Phone number: </label>
+            <div class="form-row">
+                <label for="Phone" class = "col-6"> Number: </label>
                 <input type="tel" name="Phone" id = "Phone" required/ class="form-control col-5">
                 <div class="invalid-feedback">
                   Please enter a valid phone number.
                 </div>
             </div>
 
-            <div class="form-row" style="margin-left:0">
-                <label for="Reason" class = "col-6"> Reason for Inquiry: </label>
+            <div class="form-row">
+                <label for="Reason" class = "col-6"> Why do you want to chat? </label>
                 <select name="Reason" class="form-control col-5">
                     <option value="Catering">Catering</option>
                     <option value="Booking">Booking</option>
@@ -137,13 +112,13 @@
                 </select>
             </div>
 
-            <div class="form-row" style="margin-left:0">
-                <label for="Additional Information" class = "col-6"> Additional Information: </label>
+            <div class="form-row">
+                <label for="Additional Information" class = "col-6"> Anything in particular? </label>
                 <textarea name="Additional Information" height: 100px class="form-control col-5"></textarea>
             </div>
 
-            <div class="form-row" style="margin-left:0">
-                <label for="past" class = "col-6"> Have you been to the restaurant? </label>
+            <div class="form-row">
+                <label for="past" class = "col-6"> Have you visited us before? </label>
                 <ul>
                   <li>
                     <input type="radio" name="past" value="Yes" checked /> Yes
@@ -154,8 +129,8 @@
                 </ul>
             </div>
 
-            <div class="form-row" style="margin-left:0">
-                <label for="ContactDay" class = "col-6"> What is the best day to contact you: </label>
+            <div class="form-row">
+                <label for="ContactDay" class = "col-6"> When's best to message back? </label>
                 <ul>
                   <li>
                     <input type="checkbox" name="ContactDay" value="Monday"> Monday
@@ -178,7 +153,7 @@
             <div class="form-row">
                 <div class="form-group col">
                     <button type="submit" id="submitButton" class="btn btn-primary">
-                        Submit
+                        Send
                     </button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
@@ -186,12 +161,19 @@
           </form>
         </div>
 
-
         <div class="section parallax bg3">
-            <div class="darken-pseudo darken-with-text fill" class="relative">
-                <div class="fix_bottom">
-                  <h3> The street, London, UK, SE1 00A </h3>
-                  <p> 020 555 1234 </p>
+            <div class="darken darken-text fill" class="relative">
+              <div class="fix-bottom left">
+                <p> The street, <br> Coventry, <br>UK <br>CV1 00A </p>
+                <br>
+                <p>admin@therestaurant.com</p>
+                <p> 024 5555 1234 </p>
+              </div>
+
+              <div class="fix-bottom right">
+                <p> <i class="fab fa-twitter"></i> @TheRestaurant</p>
+                <p> <i class="fab fa-facebook"></i> /TheRestaurantCoventry</p>
+                <p> <i class="fab fa-instagram"></i> /TheRestaurant</p>
               </div>
             </div>
 
@@ -200,106 +182,13 @@
       </div>
 
 
-        <script src="scripts\contact_form.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <noscript>
-            alert("You have javascript disabled. This will effect your viewing experience.");
-        </noscript>
-        <script>
-          document.querySelector('.wrapper').addEventListener('scroll',myFunction);
-          window.addEventListener('resize', resize);
-
-          var navbar = document.getElementById("navbar");
-          var howto1 = document.getElementById("howto1");
-          var howto2 = document.getElementById("howto2");
-          var howto3 = document.getElementById("howto3");
-          var howto4 = document.getElementById("howto4");
-          var page = document.getElementById("page");
-          var boat = document.getElementById("boat");
-          var near = document.getElementById("near");
-          var middle = document.getElementById("middle");
-          var far = document.getElementById("far");
-          var cloud1 = document.getElementById("cloud1");
-          var cloud2 = document.getElementById("cloud2");
-
-          var $foo = $("#page");
-          navbar.style.width = $foo.prop("clientWidth")+"px";
-
-          function resize() {
-            $foo = $("#page");
-            navbar.style.width = $foo.prop("clientWidth")+"px";
-          }
-
-          function myFunction() {
-
-            var windowTop = page.scrollTop;
-
-            if (page.scrollTop  >= 530) {
-              navbar.classList.add("sticky");
-              navbar.style.top = (page.scrollTop)+"px";
-            } else {
-              navbar.classList.remove("sticky");
-              navbar.style.top = 530 +"px";
-            }
-            if (page.scrollTop <= 3430){
-              if (page.scrollTop  >= 1530) {
-                howto1.style.top = (page.scrollTop + 90)+"px";
-              } else {
-                howto1.style.top = 1620 + "px";
-              }
-
-              if (page.scrollTop  >= 2130) {
-                howto2.style.top = (page.scrollTop + 90)+"px";
-              } else {
-                howto2.style.top = 2220 + "px";
-              }
-
-              if (page.scrollTop  >= 2730) {
-                howto3.style.top = (page.scrollTop + 90)+"px";
-              } else {
-                howto3.style.top = 2820 + "px";
-              }
-
-              if (page.scrollTop  >= 3330){
-                howto4.style.top = (page.scrollTop + 90)+"px";
-              } else {
-                howto4.style.top = 3420 + "px";
-              }
-            }
-
-            function scroll1 (){
-              page.scrollTo({top: 1530,  behavior: 'smooth'});
-            }
-            function scroll2 (){
-              page.scrollTo({top: 2130,  behavior: 'smooth'});
-            }
-            function scroll3 (){
-              page.scrollTo({top: 2730,  behavior: 'smooth'});
-            }
-            function scroll4 (){
-              page.scrollTo({top: 3330,  behavior: 'smooth'});
-            }
-            howto1.addEventListener("click", scroll1);
-            howto2.addEventListener("click", scroll2);
-            howto3.addEventListener("click", scroll3);
-            howto4.addEventListener("click", scroll4);
-
-            var leftboat = windowTop - 300;
-            boat.style.left= leftboat+"px";
-            near.style.left= -((windowTop*0.4)%40)+"px";
-            middle.style.left= -((windowTop*0.2)%40)+"px";
-            far.style.left= -((windowTop*0.1)%40)+"px";
-
-            cloud1.style.right= ((windowTop*0.1)-300)+"px";
-            cloud2.style.right= (-(windowTop*0.2)-1000)+"px";
-
-
-
-          }
-
-
-        </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="scripts/contact_form.js"></script>
+      <script src="scripts/nav_stick.js"></script>
     </body>
 </html>

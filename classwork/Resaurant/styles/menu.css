@@ -1,0 +1,93 @@
+/*
+  Name: Aidan Smith
+  Assignment: Restaurant Site
+  Date Created: 27/11/2020
+  Most recent revision: 10/01/2021
+*/
+
+.menu-heading {
+  padding-left:10%;
+  padding-right:10%;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+.row {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.pullbar {
+  width:100%;
+  text-align:center;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  font-size: 20px;
+  height: 50px;
+  position:relative;
+  box-shadow: 0 10px 10px -6px black;
+}
+
+.fa-chevron-down{
+  transform: rotate(0deg);
+  transition: transform 0.35s linear;
+}
+
+.fa-chevron-down.open{
+  transform: rotate(180deg);
+  transition: transform 0.35s linear;
+}
+
+#Accordion1, #Content1, #pull1 {
+  background-color: #F38B24;
+}
+
+#menu-section1, #Accordion2, #Content2, #pull2{
+  background-color: #D724F3;
+}
+
+#menu-section2, #Accordion3, #Content3, #pull3{
+  background-color: #F3E924;
+}
+
+#content3, #pull3, #Accordion3{
+  z-index: 5;
+}
+
+#pull3 {
+  margin-bottom:-50px;
+}
+
+#menu-section3{
+  background-color: rgba(0,0, 0, 0);
+}
+
+#menu-close {
+  height:100px;
+}
+
+hr {
+  background-color: black; height: 3px; border: 0;
+}
+
+.menu {
+  text-align:center;
+  cursor: pointer;
+}
+
+#menu-section1:hover .pullbar {
+  font-size: 30px;
+}
+#Accordion1 {
+  padding-top: 30px;
+}
+
+#menu-section2:hover .pullbar {
+  font-size: 30px;
+}
+
+#menu-section3:hover .pullbar {
+  font-size: 30px;
+}
