@@ -5,7 +5,9 @@
   Most recent revision: 10/01/2021
 */
 
-
+/*
+  These styles are used for all the pages to keep it consistent
+*/
 body {
     font-family: helvetica, arial;
     color: black;
@@ -19,7 +21,7 @@ body {
 h1 {
 
 font-family: "Brush Script MT", Georgia, serif;
-font-size: 5em;
+font-size: 60px;
 }
 
 h2 {
@@ -49,13 +51,14 @@ nav {
   padding-top: 12px;
   padding-bottom: 12px;
   margin-bottom: 10px;
-  padding-left:8%;
   color:white;
   position:fixed;
   top: 530px;
   z-index: 10;
-  width:100%;
+  width:200%;
 }
+
+#home{margin-left:4%;}
 
 nav .btn {
     font-size: 30px;
@@ -75,6 +78,15 @@ nav .btn:hover:before{
 #menu:hover:before {content:"Menu"}
 #contact:hover:before {content:"Contact us"}
 
+#logo {
+  position:fixed;
+  top:300px;
+  z-index: 11;
+  padding-left:10%;
+}
+#logo a:hover{
+    text-decoration: none;
+}
 
 .wrapper {
   height: 100vh;
@@ -199,6 +211,12 @@ nav .btn:hover:before{
   background-color:black;
 }
 
+.carousel-control{
+  z-index:3;
+  color:black;
+  font-size:30px;
+}
+
 .fix-bottom {
   position: absolute ;
   bottom:0;
@@ -228,7 +246,7 @@ nav .btn:hover:before{
 }
 
 #news-carousel .christmas {
-  background-color:red;
+  background-color:#5AF324;
 }
 
 .page-title {

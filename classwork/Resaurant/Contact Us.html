@@ -15,35 +15,39 @@
       <title>Contact us</title>
       <link rel="icon" href="images/house.png">
 
+      <!--The style sheets-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
       <link href = "styles\contact_form.css" rel = "stylesheet" type="text/css">
     </head>
 
     <body>
+      <!--The whole page is in a section for parallax-->
       <div class="wrapper" id="page">
+        <!--This is a message if javascript is disabled-->
         <noscript>
             You have javascript disabled. This will affect your viewing experience.
         </noscript>
 
-
+        <!--The header of the page-->
         <header class="section parallax bg1">
           <div class="darken darken-text fill">
-            <div style="padding-top:300px; padding-left:10%;">
-              <h1>The Restaurant</h1>
-              <h2>Best Korean BBQ</h2>
+            <div id="logo">
+              <a href = "home.html" ><h1>The Restaurant</h1></a>
+              <h2 id = "sub">Best Korean BBQ</h2>
             </div>
           </div>
         </header>
 
-
+        <!--The navigation bar (controlled by javascript)-->
         <nav id="navbar" >
           <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
           <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
           <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
         </nav>
 
-
+        <!--This news carousel has new updates of the restaurant-->
+        <!--It doesn't move automatically to allow for accessability-->
         <div id="news-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
           <ul class="carousel-indicators">
@@ -68,24 +72,24 @@
             </div>
           </div>
 
-          <a class="carousel-control-prev" href="#news-carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
+          <a class="carousel-control carousel-control-prev" href="#news-carousel" data-slide="prev">
             <i class="fas fa-chevron-left"></i>
           </a>
-          <a class="carousel-control-next" href="#news-carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
+          <a class="carousel-control carousel-control-next" href="#news-carousel" data-slide="next">
             <i class="fas fa-chevron-right"></i>
           </a>
 
         </div>
 
-
+        <!--The main title for the page-->
         <div class="page-title">
-          <h4>Contact Us</h4>
+          <h4>Contact us</h4>
         </div>
 
-
+        <!--This is the form to be filled out. It uses javascript validation-->
         <div class="form">
-          <form name="contact-us" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate style="width: 80%">
-            <div class="form-row" style="margin-left:0">
+          <form name="contact-us" class="needs-validation" onsubmit="return validate();" onreset="resetView();" novalidate>
+            <div class="form-row">
                 <label for="Name" class = "col-6"> Name: </label>
                 <input type="text" name="Name" id = "Name" required/ class="form-control col-5" pattern="[a-zA-Z]+">
                 <div class="invalid-feedback">
@@ -168,7 +172,8 @@
         </div>
 
 
-        <div class="section parallax bg3">
+        <!--The footer contains some key information-->
+        <footer class="section parallax bg3">
             <div class="darken darken-text fill" class="relative">
               <div class="fix-bottom left">
                 <p> The street, <br> Coventry, <br>UK <br>CV1 00A </p>
@@ -183,18 +188,20 @@
                 <p> <i class="fab fa-instagram"></i> /TheRestaurant</p>
               </div>
             </div>
-        </div>
+        </footer>
+    </div>
 
-      </div>
+        <!--These scripts are general codes to allow all the pages to work-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="scripts/contact_form.js"></script>
-      <script src="scripts/nav_stick.js"></script>
+        <!--This controls features specific to the contact us page-->
+        <script src="scripts/contact_us.js"></script>
+        <!--This controls the navigation bar-->
+        <script src="scripts/nav_stick.js"></script>
     </body>
 </html>

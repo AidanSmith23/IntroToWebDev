@@ -15,6 +15,7 @@
       <title>Home Page</title>
       <link rel="icon" href="images/house.png">
 
+      <!--The style sheets-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href = "styles\styles.css" rel = "stylesheet" type="text/css">
       <link href = "styles\home.css" rel = "stylesheet" type="text/css">
@@ -22,34 +23,36 @@
 
     <body>
 
+      <!--The whole page is in a section for parallax-->
       <div class="wrapper" id="page">
+        <!--This is a message if javascript is disabled-->
         <noscript>
           You have javascript disabled. This will affect your viewing experience.
         </noscript>
 
-
+        <!--The header of the page-->
         <header class="section parallax bg1">
           <div class="darken darken-text fill">
-            <div style="padding-top:300px; padding-left:10%;">
-              <h1>The Restaurant</h1>
-              <h2>Best Korean BBQ</h2>
+            <div id="logo">
+              <a href = "home.html" ><h1>The Restaurant</h1></a>
+              <h2 id = "sub">Best Korean BBQ</h2>
             </div>
           </div>
         </header>
 
-
+        <!--The navigation bar (controlled by javascript)-->
         <nav id="navbar" >
           <a class = "btn fas fa-home" href="Home.html" id = "home" ></a>
           <a class = "btn fas fa-utensils" href="Menu.html" id = "menu"> </a>
           <a class = "btn fas fa-comment-dots" href="Contact Us.html" id = "contact"></a>
         </nav>
 
-
+        <!--A news section-->
         <div class="news">
       	   <h4>Big News</h4>
       		 <h2>We're opening in a new location </h2>
            <a href="https://www.google.com/maps/place/Jinseon+Korean+BBQ+Restaurant+%26+Bar/@52.40996,-1.5103307,17z/data=!3m1!4b1!4m5!3m4!1s0x48774bbb8c749dc1:0x41808c4fa13b7504!8m2!3d52.40996!4d-1.508142" target="_blank">
-             <div class="map">
+               <!--This holds the moving scene, again controlled by javascript-->
                <div class="scene">
                  <div class="wave move" id="far"></div>
                  <div class="island"></div>
@@ -58,13 +61,16 @@
                  <div class="wave move" id="near"></div>
                  <div class="cloud1 move" id="cloud1"></div>
                  <div class="cloud2 move" id="cloud2"></div>
+                 <div class="cloud3 move" id="cloud3"></div>
+                 <div class="cloud4 move" id="cloud4"></div>
+                 <div class="cloud3 move" id="cloud5"></div>
+                 <div class="cloud4 move" id="cloud6"></div>
                  <i class="fas fa-map-pin pin"></i>
                </div>
-             </div>
            </a>
         </div>
 
-
+        <!--A section to hold the description of the restaurant-->
         <div class="section parallax bg2">
           <div class="darken2 darken-text fill">
               <div class="center small">
@@ -75,9 +81,11 @@
           </div>
         </div>
 
-
+        <!--This section explains how the restaurant works-->
         <div class="howtobox">
+          <!--The backgrounds of each section don't move-->
           <div id="howtoback1" class = "howtoback">
+            <!--Each of these parts move with the page (with javascript)-->
             <div id = "howto1" class="howto">
               <div class="hcentre column">
                 <p class="numberCircle circle1">1</p>
@@ -131,7 +139,8 @@
           </div>
         </div>
 
-
+        <!--This is a bootstrap carousel to display three reviews-->
+        <!--It doesn't move automatically to allow for accessability-->
         <div id="review-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
           <ul class="carousel-indicators">
@@ -166,16 +175,17 @@
             </div>
           </div>
 
-          <a class="carousel-control-prev" href="#review-carousel" data-slide="prev" style="z-index:3; color:black; font-size:30px;">
+          <a class="carousel-control carousel-control-prev" href="#review-carousel" data-slide="prev">
             <i class="fas fa-chevron-left"></i>
           </a>
-          <a class="carousel-control-next" href="#review-carousel" data-slide="next"style="z-index:3; color:black; font-size:30px;">
+          <a class="carousel-control carousel-control-next" href="#review-carousel" data-slide="next">
             <i class="fas fa-chevron-right"></i>
           </a>
 
         </div>
 
-        <div class="section parallax bg3">
+        <!--The footer contains some key information-->
+        <footer class="section parallax bg3">
             <div class="darken darken-text fill" class="relative">
               <div class="fix-bottom left">
                 <p> The street, <br> Coventry, <br>UK <br>CV1 00A </p>
@@ -190,18 +200,20 @@
                 <p> <i class="fab fa-instagram"></i> /TheRestaurant</p>
               </div>
             </div>
-
-        </div>
+        </footer>
     </div>
 
-
+        <!--These scripts are general codes to allow all the pages to work-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/7ca58b5fbf.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--This controls features specific to the home page-->
         <script src="scripts/home.js"></script>
+        <!--This controls the navigation bar-->
         <script src="scripts/nav_stick.js"></script>
 
 
